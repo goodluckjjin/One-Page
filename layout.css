@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: inherit;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+}
+
+section .container {
+    position: relative;
+    padding: 103px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+section .container .content {
+    width: 100%;
+    padding: 0 10%;
+}
+
+.container h2.title {
+    margin-bottom: 60px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* hello */
+#hello {
+    height: 80vh;
+    background: url(https://image.freepik.com/free-photo/green-tropical-palm-leaves-bright-yellow-background_24972-490.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    font-family: 'OTEnjoystoriesBA', ng;
+}
+
+/* about */
+#about {
+    height: auto;
+    background-color: #f1f2f6;
+    color: #18283c;
+}
+
+/* skill */
+#skills {
+    background-color: white;
+}
+
+/* project */
+#project {
+    background-color: #f1f2f6;
+    color: #18283c;
+}
+
+#project .container {
+    align-items: center;
+}
+
+#project .container .content {
+    height: 100%;
+}
+
+
+/* contact */
+#contact {
+    height: 70vh;
+    background-image: url(./img/contact_bg.jpg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    color: white;
+}
+
+.footer {
+    height: 30vh;
+    font-size: 12px;
+}

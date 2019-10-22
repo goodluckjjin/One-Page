@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>MENU</title>
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body>
+	<div id="wrap">
+		<header class="header">
+			<h1><a href="#">jin</a></h1>
+			<nav>
+				<div class="menuWrap">
+					<ul class="menu">
+						<li><a class="hello" data-target="#hello">hello</a></li>
+						<li><a class="about" data-target="#about">about</a></li>
+						<li><a class="skills" data-target="#skills">skills</a></li>
+						<li><a class="project" data-target="#project">project</a></li>
+						<li><a class="contact" data-target="#contact">contact</a></li>
+					</ul>
+				</div>
+				<button class="mobile_btn" type="button">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</button>
+			</nav>
+		</header>
+		<section id="hello">
+			<div class="container">
+                <div class="content">
+					<div class="text_box">
+						<p>Hi, 저는</p>
+						<p><span class="typed-text"></span><span 	class="cursor">&nbsp;</span></p>
+						<p>신입 개발자입니다</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about">
+			<div class="container">
+				<div class="profile_box">
+					<img class="profile_pic" src="./img/profile.jpg" alt="">
+				</div>
+				<h2 class="title">jeong jieun</h2>
+				<p class="desc">
+					<span class="desc_tag">오픈 소스를 활용할 줄 아는</span>
+					<span class="desc_tag">의사소통을 중요시하는</span>
+					<span class="desc_tag">새로운 경험을 추구하는</span>
+				</p>
+				<ul class="content clearfix">
+					<li class="cnt cnt1">
+						<p class="cnt_tit"><strong>birth day</strong></p>
+						<p class="cnt_desc">1993. 04 .29</p>
+					</li>
+					<li class="cnt cnt2">
+						<p class="cnt_tit"><strong>address</strong></p>
+						<p class="cnt_desc">경기도 의왕시</p>
+					</li>
+					<li class="cnt cnt3">
+						<p class="cnt_tit"><strong>education</strong></p>
+						<p class="cnt_desc">강남 그린컴퓨터<br>'디지털컨버젼스 프론트엔드 양성과정' 수료</p>
+					</li>
+					<li class="cnt cnt4">
+						<p class="cnt_tit"><strong>hobbies</strong></p>
+						<p class="cnt_desc">요리하기, 파티·축제 즐기기, 여행하기 등 </p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="skills">
+			<div class="container">
+				<h2 class="title">skills</h2>
+				<div class="content clearfix">
+					<div id="line">
+						<ul id="lineBar">
+							<li class="barList webSkill">
+								<div class="barTitle">
+									<span class="title">web skills</span>
+									<div class="logo">
+										<a href="#;return false; onclick='test()'"><img class="html_logo" src="./img/html5-logo-icon.png" alt=""></a>
+										<a href="#;return false; onclick='test()'"><img src="./img/css-logo-icon.png" alt=""></a>
+									</div>
+								</div>
+								<div class="barGraph">
+									<div class="bar"></div>
+									<div class="text">0</div>
+								</div>
+							</li>
+							<li class="barList language">
+								<div class="barTitle">
+									<span class="title">language</span>
+									<div class="logo">
+										<a href="#;return false; onclick='test()'"><img src="./img/javascript-logo-icon.png" alt=""></a>
+									</div>
+								</div>
+								<div class="barGraph">
+									<div class="bar"></div>
+									<div class="text">0</div>
+								</div>
+							</li>
+							<li class="barList">
+								<div class="barTitle">
+									<span class="title">library</span>
+									<div class="logo">
+										<a href="#;return false; onclick='test()'"><img src="./img/react-logo-icon.svg" alt=""></a>
+									</div>
+								</div>
+								<div class="barGraph">
+									<div class="bar"></div>
+									<div class="text">0</div>
+								</div>
+							</li>
+							<li class="barList">
+								<div class="barTitle">
+									<span class="title">version control</span>
+									<div class="logo">
+										<a href="#;return false; onclick='test()'"><img src="./img/github-logo-icon.png" alt=""></a>
+									</div>
+								</div>
+								<div class="barGraph">
+									<div class="bar"></div>
+									<div class="text">0</div>
+								</div>
+							</li>
+							<li class="barList">
+								<div class="barTitle">
+									<span class="title">인내심<span class="point">(전직 유치원 교사)</span></span>
+									<div class="logo">
+										<a href="#;return false; onclick='test()'"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkuNTYyIDExLjMybC0xLjEwNi41MjhjLjUxOCAxLjA1OC4zMjkgMi41MDctLjQ1NSAzLjM4M2wuOTQ0Ljc2OWMxLjEtMS4yMTUgMS4zOTktMy4xNzcuNjE3LTQuNjh6bS0xNC41MDYgNC42OGwuOTQ0LS43NjljLS43ODQtLjg3Ni0uOTczLTIuMzI2LS40NTUtMy4zODNsLTEuMTA3LS41MjhjLS43ODIgMS41MDMtLjQ4MyAzLjQ2NS42MTggNC42OHptNi45NDQtMTRjNS41MTQgMCAxMCA0LjQ4NiAxMCAxMHMtNC40ODYgMTAtMTAgMTAtMTAtNC40ODYtMTAtMTAgNC40ODYtMTAgMTAtMTB6bTAtMmMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptNS4wMDEgMTUuMjAzbC0uNDYyLS41OGMtMS4yNjMuODE5LTIuNjgzIDEuMzA4LTQuNTM4IDEuMzA4cy0zLjI3NS0uNDg5LTQuNTM4LTEuMzA4bC0uNDYyLjU4Yy45MzEgMS4xNjEgMi43MSAyLjc5NyA1IDIuNzk3czQuMDY5LTEuNjM2IDUtMi43OTd6bS04LjUwMS03LjIwM2MtLjgyOCAwLTEuNS42NzEtMS41IDEuNXMuNjcyIDEuNSAxLjUgMS41IDEuNS0uNjcxIDEuNS0xLjUtLjY3Mi0xLjUtMS41LTEuNXptNyAwYy0uODI4IDAtMS41LjY3MS0xLjUgMS41cy42NzIgMS41IDEuNSAxLjUgMS41LS42NzEgMS41LTEuNS0uNjcyLTEuNS0xLjUtMS41eiIvPjwvc3ZnPg=="></a>
+									</div>
+								</div>
+								<div class="barGraph">
+									<div class="bar"></div>
+									<div class="text">0</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="project">
+			<div class="container">
+				<h2 class="title">project</h2>
+				<div class="content clearfix">
+					<div class="slider_box">
+						<ul class="slider_list">
+							<li class="slider slider_01">
+								<a class="project_thumb" href="./project/project-1/preview.html"><img src="./img/project-1-bg.jpg" alt=""></a>
+								<div class="project_content">
+									<p class="project_title">CSS layout</p>
+									<p class="project_desc">grid와 flex를 이용하여 만든 21가지 레이아웃</p>
+									<div class="project_tag">
+										<span>CSS</span>
+										<span>Grid</span>
+										<span>Flex</span>
+									</div>
+								</div>
+							</li>
+							<li class="slider slider_02">
+								<a class="project_thumb" href="./project/project-2/preview.html"><img src="./img/project-2-bg.jpg" alt=""></a>
+								<div class="project_content">
+									<p class="project_title">Movie App</p>
+									<p class="project_desc">React를 이용한 movie API를 불러오는 간단한 사이트</p>
+									<div class="project_tag">
+										<span>Nomadecoder</span>
+										<span>React</span>
+										<span>Javascript</span>
+										<span>map</span>
+									</div>
+								</div>
+							</li>
+							<li class="slider slider_03">
+								<a class="project_thumb" href="./project/project-3/preview.html"><img src="./img/project-3-bg.jpg" alt=""></a>
+								<div class="project_content">
+									<p class="project_title">Javascript 단어 뽀개기</p>
+									<p class="project_desc">Inside Javascript 책을 통해 생소한 단어부터 헷깔리는 단어까지 몽땅 블로그에 정리하기</p>
+									<div class="project_tag">
+										<span>Inside Javascript</span>
+										<span>Javascript</span>
+										<span>개념 다지기</span>
+									</div>
+								</div>
+							</li>
+							<li class="slider slider_04">
+								<a class="project_thumb" href="./project/project-4/preview.html"><img src="https://image.freepik.com/free-photo/top-view-water-touching-sand-beach_23-2148226583.jpg" alt=""></a>
+								<div class="project_content">
+									<p class="project_title">FoodForME</p>
+									<p class="project_desc">React를 이용하는 Front-end 역할을 맡은 간단한 사이트</p>
+									<div class="project_tag">
+										<span>React</span>
+										<span>Javascript</span>
+										<span>FoodForMe</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="slider_btn_box">
+							<button type="button" class="slider_btn prev"></button>
+							<button type="button" class="slider_btn next"></button>
+						</div>
+						<div class="slider_dot">
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<div class="container">
+				<h2 class="title">contact me!</h2>
+				<div class="content clearfix">
+					<div class="item">
+						<p class="contact_content">소중한 시간을 내시어 제 포트폴리오를 봐주셔서 감사합니다.</br>문의 사항이 있으시다면 이메일로 보내주세요!</p>
+						<button class="contact_btn" type="button"><a href="mailto:assd3327@gamil.com"> assd3327@gmail.com</a></button>
+						<!-- <button class="contact_btn" type="button"  onclick="location.href='assd3327@gmail.com' ">assd3327@gmail.com</button> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="copyright_box">
+				<p class="copyright">Copyright ⓒ 2019 Jieun Jeong all rights reserved</br>이 사이트는 포트폴리오 용도로 제작하였으며 상업적인 용도로 사용하지 않음을 밝힙니다.</p>
+			</div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script type="text/javascript">
+
+        // typing animation
+
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        const textArray = ["토의를 좋아하는", "영어를 공부하는", "프론트엔드"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+			if (charIndex < textArray[textArrayIndex].length) {
+				if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+				typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+				charIndex++;
+				setTimeout(type, typingDelay);
+			} 
+			else {
+				cursorSpan.classList.remove("typing");
+				setTimeout(erase, newTextDelay);
+			}
+        };
+
+        function erase() {
+            if (charIndex > 0) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+			} 
+			else {
+				cursorSpan.classList.remove("typing");
+				textArrayIndex++;
+				if(textArrayIndex>=textArray.length) textArrayIndex=0;
+				setTimeout(type, typingDelay + 1100);
+			}
+        };
+
+        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+        	if(textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+
+
+
+
+		//mobile_btn
+
+		$('.mobile_btn').click(function() {
+			if($(this).hasClass('active')) {
+				$('nav').removeClass('active');
+				$('.menuWrap').removeClass('active');
+				$(this).removeClass('active');
+			} else {
+				$('nav').addClass('active');
+				$(this).addClass('active');
+				$('.menuWrap').addClass('active');
+			};
+		});	
+
+
+		
+        
+		// line bar
+		$.fn.lineBar = function(option){
+
+			var O = $(this);
+			var state;
+
+			var bar = {
+				init : function(){				
+
+					O.find('.bar').each(function(i){
+						$(this).append('<em style="float: left; height: 100%; background-color : '+option.barColor[i]+'"></em>');
+					})
+
+					$(document).scroll(function(){
+
+						var baseline = $(window).scrollTop()+$(window).height();
+
+						if(O.offset().top<baseline){
+							bar.action();
+						}
+					}).scroll();
+
+				},
+				action : function(){
+
+					if (state) return false;
+
+					var I = 0;			
+
+					function increase (){
+
+						if (I>=100) return false;
+						state = true;
+						O.find('.barList').each(function(i){
+							if ($(this).find('.text').text()*1<option.percent[i]) {
+								$(this).find('.text').text(I);
+								$(this).find('.bar em').css('width', I+'%');
+							}						
+						});
+						I++;
+						setTimeout(increase, 10/option.speed);
+					}
+					increase();
+				}
+			}
+			bar.init();
+			}
+
+			$('#lineBar').lineBar({
+			speed : 0.7,
+			barColor : ['coral', 'yellowgreen', 'gold', 'skyblue', '#c56cf0'],
+			percent : [80, 50, 50, 50, 99]
+		});
+
+		//#project slide
+
+
+
+
+		//Parallax scroll
+		$.fn.myAnimation = function(option){
+
+			var O = $(this); //anim 안에 $(this)를 써주기 위해 변수 O에 담는다. //item
+
+			var offsetArray = [];
+
+			var anim = {
+
+				init : function(){
+					O.each(function(){
+						offsetArray.push($(this).offset().top); //$(this).offset().top은 item의 높이
+					});
+					O.css(option.from);
+				},
+
+				action : function(){
+					var baseline = $(window).scrollTop()+$(window).height()-100;
+					O.each(function(i){ //each는 O의 갯수만큼 반복시켜줌
+						if (baseline>offsetArray[i]) {
+							$(this).delay(option.delay).animate(option.to, option.speed, option.ease);
+						}
+					});
+				var offsetTop = O;
+				}
+
+			}
+			anim.init();
+			$(document).on('scroll', anim.action);
+
+		};
+
+		$('.item').myAnimation({
+			speed : 500,
+			delay : 300,
+			ease : 'easeOutQuad',
+			from : {
+				'position' : 'relative',
+				'opacity' : 0,
+				'top' : '500px'
+			},
+			to : {
+				'opacity' : 1,
+				'top' : '0px'
+			}
+		});
+
+
+		// project 슬라이드
+		
+
+
+		
+		
+
+		$(document).ready(function(){
+
+			var slider = $('.slider');
+			console.log("slider = ", slider);
+
+			//current position
+			var pos = 0;
+
+			//number of slides
+			var sliderNum = slider.length;
+
+			slider.eq(pos).addClass('active');
+			console.log("slider.eq(pos) = ", slider.eq(pos));
+			console.log($('.slider').get(0));
+
+			//get()과 eq() 둘다 배열로 가져오는데 무슨차이인가? 
+			// 1. 아마 가져오는 형태의 차이같다. 노드와 객체?
+			// 2. get()메서드는 addClass사용이 안된다
+			var currentSlider = slider.get(pos);
+			var currentSlider2 = slider.eq(pos);
+			console.log("slider.get(pos) = ", currentSlider);
+			console.log("slider.eq(pos) = ", currentSlider2);
+			
+
+			//next slide
+			$('.slider_btn.next').click(function(){
+				sliderRight();
+			})
+
+			//pre slide
+			$('.slider_btn.prev').click(function(){
+				sliderLeft();
+			})
+
+			//active도 잘 되고 내가 원하는 요소도 console로 잘 나오는데 왜 전체 요소에 준 display none이 안먹나?
+			function sliderLeft(){
+				pos--;
+				if(pos==-1) {pos = sliderNum-1;}
+				slider.removeClass('active');
+				slider.eq(pos).addClass('active');
+				
+			}
+
+			function sliderRight(){
+				pos++;
+				if(pos==sliderNum) {pos=0;}
+				console.log("rightbtn눌렀을때slider.get(pos)값  = ", slider.get(pos));
+				slider.removeClass('active');
+				slider.eq(pos).addClass('active');
+			}
+		});
+		
+		
+
+		
+		//mousewheel event
+		$(document).ready(function(){
+			$.fn.extend({ // step.2) 제이쿼리에 메소드를 추가(복수의 매소드를 추가할때 사용)
+				myScroll : function(option){ // myScroll이라는 제이쿼리 메소드를 추가
+					var O = $(this);
+					var page; // 현재 보고있는 페이지를 나타내는 변수
+					var scroll = { // myScroll에 관련된 메소드들이 모여있는 객체...
+						init : function(){ // 기본세팅 메소드
+			
+							// step.3) 섹션의 높이 세팅
+							$(window).on('resize', function(){ // window가 리사이즈 될때마다...
+			
+								O.each(function(i){ // section의 갯수만큼 반복
+			
+									var H;
+			
+									if (option.height) { // option.height가 존재한다면...
+										$.isArray(option.height) ? H = option.height[i] : H = option.height;// 배열값이나 숫자를 리턴
+									} else { // option.height가 없거나 false라면...
+										H = $(window).height(); // window의 높이를 리턴
+									}
+			
+									if(option.minHeight&&H<option.minHeight) H=option.minHeight; // 섹션의 최소 높이를 지정
+			
+									$(this).height(H); // 각 section에 높이를 지정
+								});
+							}).resize();
+			
+							// step.4) 스크롤이 되면 현재 페이지를 보여줘야한다.
+							$(document).on('scroll', function(){ // 문서가 스크롤 되면
+			
+								var baseline = $(window).scrollTop() + $(window).height()/2; // 베이스라인 설정
+			
+								O.each(function(i){ // 각 섹션만큼 반복
+			
+									var H = $(this).offset().top; // 각 섹션의 위치값
+									if (baseline>H) page = i; // 베이스라인보다 위로 올라가는 순간 그 섹션이 몇번째 섹션인지 리턴
+								});
+			
+								O.removeClass('active').eq(page).addClass('active'); // 현재 보이는 페이지에 active를 준다.
+			
+								scroll.nav(page); // nav메소드 실행 - page : 현재 보이는 페이지
+							}).scroll();
+			
+							// step.5) 마우스 휠 이벤트
+							$('html, body').on('mousewheel DOMMouseScroll', function(e){
+								
+								if($(this).is(":animated")) return false; // 화면이 움직이는 도중에는 중지
+			
+								var delta; // 휠의 방향을 담을 변수
+								var E = e.originalEvent;
+								// console.log(E);
+
+								if (E.detail) { //firefox
+
+									event.detail<0?delta=-1:delta=1;
+
+								} else { //chrome, ie 
+
+									event.wheelDelta<0?delta=1:delta=-1; // 휠방향에 따라 1/-1을 리턴
+								};
+			
+								if ($(window).height()>option.minHeight) { // window가 최소사이즈보다 크다면...
+			
+									if ((page==0&&delta==-1)||(page==O.length-1&&delta==1)) return false; // 1페이지보다 위로 혹은 끝페이지보다 밑으로 가고자 할때 중지시켜준다.
+			
+									scroll.action(page+=delta); // 스크롤액션을 실행
+									return false; // wheel의 기본기능을 막아준다.
+								}
+							});
+						},
+						action : function(to){ // 동작 메소드
+			
+							var T = O.eq(to).offset().top;
+							
+							// if(to = 1) {T=T-170;}
+							// else if(to=2) {T=T+170;}
+			
+							$('html, body').animate({scrollTop : T}, option.speed, option.ease);
+						},
+						nav : function(page){
+							$('nav a').removeClass('selected').eq(page).addClass('selected');
+							// 섹션 보여줄때 해당 메뉴 글자색
+							$(this).parent().siblings().children().css("color", "inherit");
+							$(this).css("color","#f5b700");
+						}
+					} // scroll객체
+			
+					scroll.init();
+				} // prototype (myScroll)
+			}); // extend
+		
+		
+			// step.1) section에 새로 만든 메소드(myScroll)를 적용...
+			$('section').myScroll({
+				// height : [600, 600, 800, 70], // 각 섹션의 높이값을 배열, 또는 숫자 전달
+				height : [
+					$('#hello').height,
+					$('#about').height,
+					$('#skills').height,
+					$('#project').height,
+					$('#contact').height
+				],
+				minHeight : 600,
+				ease : 'easeOutQuad',
+				speed : 500,
+				nav : ['hello','about','skills','project','contact']
+			});
+
+			
+			$(".menu li a").click(function(){
+				var clickPosition = $($(this).attr("data-target")).offset().top;
+			
+
+				$('html, body').animate({
+					scrollTop : clickPosition
+				}, 500);
+
+				$("nav").removeClass("active");
+				$(".menuWrap").removeClass("active");
+				$(".mobile_btn").removeClass("active");
+			});
+		});
+
+		
+
+
+		// String.prototype.testMethod = function(){
+		// 	console.log('This is the String.prototype.testMethod()');
+		// };
+		// var str = "this is test";
+		// str.testMethod();
+		// console.dir(String.prototype); // String.prototype에 testMethod()가 추가되었다
+		// console.dir(Object.prototype); // Object.prototype에는 추가가 되지 않는다.
+		//추가로 글쓰기 알게된점
+		// function Person(name){
+		// 	this.name = name;
+		// }
+
+		// Person.prototype.country = 'Korea';
+		// console.log(Person.prototype.constructor);
+		// var foo = new Person('foo');
+
+		// //디폴트 변경
+		// Person.prototype={otherCountry : 'Franch'}; //객체로 타입변환
+		// console.log(Person.prototype.constructor); // Person()함수와 관ㄱ
+		
+
+		// var bar = new Person('bar');
+
+		// console.log('test', bar.country);
+		// console.log(foo.country);
+		
+		// console.log(foo.constructor);
+		// console.log(bar.constructor);
+		
+
+		//질문 1
+		// console.log("This is global context"); // 전역 컨텍스트 or 전역 실행 컨텍스트
+		
+		// function ExContent1(){
+		// 	console.log("This is ExContext1"); 
+		// };
+
+		// function ExContext2(){
+		// 	ExContent1();
+		// 	console.log("This is ExContext2");
+		// };
+
+		// ExContext2();
+
+		
+		function execute(param1, param2){	//1. 실행 컨텍스트 생성, 자바스크립트 엔진이 실행에 필요한 여러가지 정보를 담을 활성 객체 생성
+											//2. param1, param2가 들어왔을 경우의 활성 객체의 상태를 표현한다고? 뭔말이지?
+											//3. 컨텍스트 유효범위 나타내는 스코프 정보 생성 => 활성 객체가 이 함수의 인자나 변수에 접근할 준비완료
+			var a=1; b=2;					//4. a, b변수, 함수func() 생성 => 각각의 프로퍼티가 만들어지고 값이 할당된다.(값 할당안되면 undefined)
+			function func() {
+				return a+b;
+			}
+			return param1 + param2 + func();
+		}
+
+		execute(3, 4); 
+
+		
+
+		
+
+	</script>
+</body>
+</html>

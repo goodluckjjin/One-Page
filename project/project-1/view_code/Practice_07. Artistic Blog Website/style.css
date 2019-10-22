@@ -1,0 +1,136 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #f4f4f5;
+}
+
+.header {
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.header .header__menu {
+    font-weight: 600;
+    transform: rotate(90deg);
+    font-size: 22px;
+}
+
+.header .header__title {
+    font-weight: 300;
+
+}
+
+.gallery {
+    padding: 40px;
+    background-color: #e0e3f5;
+}
+
+.gallery__wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.gallery .gallery__item {
+    height: 30vh;
+    /* padding: 50px 0; */
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.gallery .gallery__item:first-child {
+    background-image: url(https://i.pinimg.com/564x/3d/63/6a/3d636a2a910f60e53133f5ce0c589322.jpg);
+}
+
+.gallery .gallery__item:nth-child(2) {
+    background-image: url(https://i.pinimg.com/564x/ef/e9/14/efe914810efffb262622216bc9bd0b40.jpg);
+}
+
+.gallery .gallery__item:last-child {
+    background-image: url(https://i.pinimg.com/564x/de/cd/81/decd81cfb2bc73bf35d402557dc48c79.jpg);
+}
+
+.content {
+    margin: 50px 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.content .content__title {
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.8);
+}
+
+.content .content__desc {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content .content__column {
+    display: grid;
+    grid-gap: 30px;
+}
+
+.content .content__datalist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 0;
+}
+
+.content__datalist .datalist__name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content__datalist .datalist__value {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.content .content__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3498db;
+}

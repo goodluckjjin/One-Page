@@ -1,0 +1,843 @@
+@import 'layout.css';
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: rgb(255, 255, 255);
+    background-color: rgba(20, 38, 58, 0.9);
+}
+
+header h1 a,
+nav .menuWrap .menu li a {
+    display: block;
+    height: 70px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header h1 a:hover {
+    border-color: white;
+}
+
+
+
+header h1 a {
+    width: 100px;
+    font-size: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.7);;
+    border-radius: 10px;
+}
+
+nav .menuWrap .menu {
+    display: flex;
+}
+
+nav .menuWrap .menu li {
+    margin-left: 20px;
+}
+
+nav .menuWrap .menu li:first-child {
+    margin-left: 0;
+}
+
+nav .menuWrap .menu li a {
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+
+
+/* js-active -header */
+
+nav .mobile_btn {
+    position: relative;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+nav .mobile_btn .line {
+    display: block;
+    position: absolute;
+    margin: 0 5px;
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    transition:0.4s 0.4s, transform 0.4s 0s, opacity 0.4s 0.4s;
+}
+
+nav .mobile_btn .line1 {
+    top: 25%;
+}
+
+nav .mobile_btn .line2 {
+    top: 50%;
+}
+
+nav .mobile_btn .line3 {
+    top: 75%;
+}
+
+/* active  */
+nav.active .line {
+    top: 50%;
+    transition: top 0.4s 0s, transform 0.4s 0.4s, opacity 0.4s 0s;
+}
+
+nav.active .mobile_btn .line1 {
+    transform: rotate(45deg);
+}
+
+nav.active .mobile_btn .line3 {
+    transform: rotate(-45deg);
+}
+
+nav .mobile_btn.active .line2 {
+    opacity: 0;
+}
+
+.selected {
+    color: #f5b700;
+}
+
+
+/* hello */
+/* typing css ~ */
+#hello .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hello .content .text_box{
+    width: 75%;
+}
+
+
+#hello .content p {
+    font-size: 60px;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+#hello .content p:first-child {
+    text-align: left;
+}
+
+#hello .content p:nth-child(2) {
+    margin: 20px 0;
+    font-size: 70px;
+    font-weight: 700;   
+}
+
+#hello .content p:last-child {
+    text-align: right;
+}
+
+
+#hello .content p span.typed-text {
+    font-weight: normal;
+    color: #18283c;
+    font-weight: 600;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+}
+
+#hello .content p span.cursor {
+    display: inline-block;
+    background-color: white;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+#hello .content p span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0%  {
+        background-color: #ccc;
+    }
+    49% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100%  {
+        background-color: #ccc;
+    }
+}
+/* ~ typing css*/
+
+
+/* about */
+#about .container {
+    padding-top: 20vh;
+}
+
+.profile_box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -100px;
+    width: 100%;
+
+}
+
+.profile_box .profile_pic {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#about .desc {
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+}
+
+#about .desc_tag:before,
+.project_tag span:before {
+    content: "#";
+}
+
+#about .cnt {
+	float: left;
+	width: 50%;
+    margin-bottom: 40px
+}
+
+#about .cnt .cnt_tit,
+#about .cnt .cnt_desc {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#about .cnt .cnt_tit {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+#about .cnt .cnt_desc {
+    font-size: 15px;
+}
+
+/* skill */
+/* line bar~ */
+#container #line {
+ box-shadow: none;
+}
+
+#lineBar .barList {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    height: 30px;
+}
+
+#lineBar .barList:first-child {
+    margin-top: 0;
+}
+
+.barList .barTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 40%;
+    text-align: left;
+}
+
+.barList .barTitle .title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+.barList .barTitle .title .point {
+    margin-left: 5px;
+    color: red;
+    font-size: 12px;
+}
+
+.barList .barTitle .logo :nth-child(2) {
+    margin-left: 10px;
+}
+
+.barList .barTitle .logo a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.barList .barTitle .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.barList:first-child .barTitle .logo a:first-child {
+    width: 45px;
+}
+
+.barList:first-child .barTitle .logo a:last-child {
+    width: 35px;
+}
+
+.barList .barGraph {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+
+.barList .barGraph .bar {
+    width: 90%;
+    height: 100%;
+    background-color: lightgray;
+}
+
+.barList .barGraph .text {
+    width: 5%;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+}
+
+.barList .barGraph .text:after {
+    content: "%";
+}
+/* ~line bar */
+
+#project .slider_box {
+    height: 350px;
+}
+#project .slider_list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#project .slider {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#project .slider.active {
+    display: flex;
+}
+    
+.project_thumb {
+    float: left;
+    width: 60%;
+    height: 100%;
+    font-size: 0;
+    /* 브라우저에서 처음에 a태그 너비가 img너비보다 크게 나왔다가 새로고침해서 보거나 a태그나 img 태그 둘다 아무거나 빼거나 추가하기만 하면 a태그너비가 img너비랑 꼭 맞는 존나 이상한 현상이 보인다  */
+}
+
+.project_thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.project_content {
+    display: none;
+    width: 40%;
+    height: 100%;
+    padding: 40px 20px;
+    background-color: white;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project_content .project_title {
+    font-size: 22px;
+    font-weight: 600;
+}
+.project_content .project_desc {
+    color: #333;
+}
+
+.project_tag span {
+    color: #555;
+}
+
+.slider_btn_box .slider_btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.slider_btn.prev {
+    left: 3%;
+    background-image: url(./img/slide_prev_arrow.png)
+}
+.slider_btn.next {
+    right: 3%;
+    background-image: url(./img/slide_next_arrow.png);
+}
+
+
+.slider_dot {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.slider_dot .dot {
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(20, 38, 58, 0.9);
+    background-color: rgba(20, 38, 58, 0.5);
+    background-color: #f5b700;
+    
+}
+
+.slider_dot .dot:last-child {
+    margin-right: 0;
+}
+
+
+/* contact */
+#contact .title {
+    color: white;
+}
+#contact .item {
+    text-align: center;
+}
+
+#contact .item .contact_content {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    word-break: keep-all;
+}
+
+#contact .item .contact_btn {
+    padding: 20px 50px;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+/* footer */
+.copyright_box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #18283c;
+    font-weight: 100;
+    line-height: 1.8;
+    text-align: center;
+    word-break: keep-all;
+}
+
+/* 원래 해상도 : 1200px */
+/* 미디어쿼리는 1199px부터  */
+/* Web : 992px ~ 1199px*/
+@media only screen and (max-width: 1199px){
+    section .container {
+        width: 100%;
+    }
+}
+
+
+/* Tablet : 768 ~ 991 */ 
+@media only screen and (max-width: 991px){
+    header {
+        background-color: rgba(20, 38, 58, 0.4);
+    }
+    
+    #project .container .content {
+        padding: 0 5%;
+    }
+
+    header h1 a,
+    nav .menuWrap .menu li a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    }
+
+    header h1 a {
+        width: 80px;
+        font-size: 22px;
+    }
+
+    nav .menuWrap .menu li {
+        margin-left: 10px;
+    }
+
+    nav .menuWrap .menu li a {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    /* section {
+        height: inherit;
+    } */
+
+    .container h2.title {
+        font-size: 28px;
+    }
+
+    #hello .content p {
+        font-size: 50px;
+    }
+
+    #hello .content p:nth-child(2) {
+        font-size: 60px;
+    }
+
+    #about .cnt .cnt_tit,
+    #project .project_title {
+        font-size: 20px;
+    
+    }
+
+    #about .cnt .cnt_desc,
+    #project .project_desc,
+    #project .project_tag,
+    #contact .item .contact_content {
+        font-size: 13px;
+    }
+
+    .barList .barTitle .title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    #project .container .content {
+        padding: 0 10%;
+        height: auto;
+    }
+
+    #project .item {
+        display: inherit;
+        margin-bottom: 40px;
+        height: auto;
+    }
+
+    .project_thumb {
+        display: block;
+    }
+
+    .project_content {
+        padding: 60px 20px;
+    }
+
+    .slider_btn_box .slider_btn {
+        margin-top: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider_dot {
+        margin-top: 20px;
+    }
+
+    .slider_dot .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    
+
+/* Mobile(가로ver) : 481~767 */
+@media only screen and (max-width: 767px){
+
+    header h1 a {
+        width: 60px;
+        height: 50px;
+        line-height: 48px;
+        border-color: white;
+    }
+
+    nav {
+        cursor: pointer;
+    }
+
+    nav .menuWrap {
+        display: none;
+    }
+    
+    nav .menuWrap.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        padding-top: 70px;
+    }
+
+    nav .menuWrap .menu {
+        display: inherit;
+        height: 100%;
+    }
+
+    nav .menuWrap .menu li {
+        height: 20%;
+        margin: 0;
+    }
+
+    nav .menuWrap .menu li a {
+        height: 100%;
+        line-height: 20vh;
+        font-size: 30px;
+        color: white;
+        border: 1px solid white;
+        border-right: none;
+        border-left: none;
+        padding: inherit;
+    }
+
+    nav .mobile_btn {
+        display: block;
+    }
+    
+    nav .mobile_btn.active {
+        display: block;
+    }
+
+    section {
+        height: inherit;
+    }
+
+    section .container {
+        /* padding: 70px 0; */
+        padding: 20vh 0;
+    }
+
+    .container h2.title {
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
+
+    section .container .content {
+        padding: 0 20%;
+    }
+
+    #hello {
+        height: 100vh;
+    }
+
+    #hello .content .text_box {
+        width: 100%;
+    }
+
+    #hello .content p {
+        font-size: 40px;
+    }
+
+    #hello .content p:nth-child(2) {
+        font-size: 50px;
+    }
+    
+    .profile_box {
+        top: -75px;
+    }
+
+    .profile_box .profile_pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about .desc {
+        font-size: 12px;
+    }
+
+    #about .desc_tag {
+        display: block;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+
+
+    #about .cnt {
+        float: inherit;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: last baseline;
+        border-bottom: 1px solid black;
+
+    }
+
+    #about .cnt .cnt_tit,
+    #about .cnt .cnt_desc,
+    #project .project_title {
+        font-size: 16px;
+    }
+
+    #about .cnt .cnt_desc {
+        text-align: right;
+    }
+
+    #about .cnt .cnt_desc,
+    #project .project_desc,
+    #project .project_tag,
+    #contact .item .contact_content {
+        font-size: 13px;
+    }
+
+    #lineBar .barList {
+        justify-content: space-between;
+        height: 30px;
+        display: inherit;
+        margin-top: 70px;
+    }
+
+    .barList .barTitle {
+        align-items: center;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .barList .barTitle .logo a {
+        width: 30px;
+        height: 30px;
+    }
+    .barList:first-child .barTitle .logo a:first-child {
+        width: 40px;
+    }
+
+    .barList:first-child .barTitle .logo a:last-child {
+        width: 30px;
+    }
+
+    .barList .barGraph {
+        display: inherit;
+        width: 100%;
+    }
+
+    .barList .barGraph .bar {
+        width: 100%;
+        height: 35px;
+    }
+
+    .barList .barGraph .text {
+        display: none;
+    }
+
+    #project .slider_box {
+        height: 250px;
+    }
+
+    .project_content {
+        padding: 40px 20px;
+    }
+
+    .slider_btn_box .slider_btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    #contact {
+        height: auto;
+    }
+
+    .footer {
+        height: 150px;
+        font-size: 10px;
+    }
+}
+/* Mobile (세로ver) 360~480 */
+@media only screen and (max-width: 480px){
+
+    nav .menuWrap .menu li a {
+        font-size: 24px;
+    }
+
+    #hello .content p {
+        font-size: 30px;
+    }
+
+    #hello .content p:nth-child(2) {
+        font-size: 40px;
+    }
+
+    #about .desc_tag {
+        line-height: 1.4;
+    }
+
+    #about .cnt {
+        display: inherit;
+        padding-bottom: 5px;
+        margin-bottom: 25px
+    }
+
+    #about .cnt .cnt_tit {
+        margin-bottom: 2px;
+        text-align: left;
+    }
+
+    #about .cnt .cnt_desc {
+        text-align: right;
+    }
+
+    #project .slider_box {
+        height: 400px;
+    }
+
+    #project .slider {
+        display: inherit;
+    }
+
+    .project_thumb {
+        width: 100%;
+        height: 250px;
+    }
+
+    .project_content {
+        padding: 20px;
+        width: 100%;
+        height: 150px;
+    }
+
+
+}

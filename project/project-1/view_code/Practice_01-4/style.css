@@ -1,0 +1,356 @@
+*{
+    font-family: 'Questrial', sans-serif;
+}
+
+:root {
+    --colorLightGray: #b1b1b1;
+    --colorGray:  #676767;
+    --colorBlue: #0f80da;
+    --colorBlack: black;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    list-style: none;
+}
+
+a { 
+    color: var(--colorBlack);
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: none;
+}
+
+.lightGray {
+    color: var(--colorLightGray);
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/* header */
+
+.header {
+    position: relative;
+}
+
+.container {
+    padding-left: 40px; 
+    padding-right: 40px; 
+}
+/* notice */
+
+.notice {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--colorLightGray);
+    letter-spacing: -1px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.notice a {
+    text-decoration: underline;
+}
+
+.header_title {
+    padding: 30px 0;
+    font-size: 49px;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu_list .menu {
+    align-self: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu_list .menu a {
+    color: var(--colorGray);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.link {
+    border-top: 1px solid var(--colorLightGray);
+    border-bottom: 1px solid var(--colorLightGray);
+}
+
+.link a {
+    padding: 30px 0;
+    width: 50%;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.link a.free_click {
+    position: relative;
+}
+
+.link a.free_click:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 0;
+    height: 73px;
+    border-right: 1px solid var(--colorLightGray);
+}
+
+
+.link a .lightGray{
+    font-size: 12px;
+}
+
+
+/* main */
+
+.main {
+    position: relative;
+}
+
+.main_title_box {
+    position: relative;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.main_title span{
+    background: #05dac6;
+    background: -webkit-linear-gradient(left, #05dac6, #0238d0);
+    background:    -moz-linear-gradient(right, #05dac6, #0238d0);
+    background:      -o-linear-gradient(right, #05dac6, #0238d0);
+    background:         linear-gradient(to right, #05dac6, #0238d0);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.main .try {
+    margin: 20px 0;
+    color: var(--colorGray);
+    font-size: 28px;
+    text-transform: uppercase;
+    font-style: italic; 
+    
+}
+
+.main .shop_holiday .go_shop {
+    display: inline-block;
+    padding: 10px 50px;
+    width: max-content;
+    border: 1px solid var(--colorGray);
+    color: var(--colorGray);
+    text-align: center;
+}
+
+.shop_holiday .go_shop .point {
+    color: var(--colorBlack);
+}
+
+/* grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 50vh);
+    grid-gap: 10px;
+}
+
+.grid .grid_item {
+    background-color: #efefef;
+}
+
+.grid_item:nth-child(2),
+.grid_item:nth-child(3),
+.grid_item:nth-child(4),
+.grid_item:nth-child(5),
+.grid_item:nth-child(6),
+.grid_item:nth-child(7),
+.grid_item:nth-child(8),
+.grid_item:nth-child(10),
+.grid_item:nth-child(11),
+.grid_item:nth-child(12),
+.grid_item:nth-child(13),
+.grid_item:nth-child(15) {
+    background-size: cover;
+    background-position: 0 0;
+    background-image: url(https://thumbnail11.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2019/06/28/16/2/e00d602c-20da-41c7-abbc-207183714199.jpg);
+}
+
+.grid .grid_item.summer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #34bdff;
+}
+
+.grid_item .summerOffer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    height: 80%;
+    border: 5px solid white;
+    background-color: #34bdff;
+    color: white;
+}
+.summerOffer .tit {
+    border-bottom: 1px dotted white;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.summerOffer .cnt {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.summerOffer .selected_style {
+    align-self: flex-start;
+    text-transform: capitalize;
+}
+
+.daily_inspiration.flex {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.daily_inspiration .title {
+    padding-bottom: 7px;
+    width: 240px;
+    border-bottom: 3px dotted var(--colorGray);
+    font-size: 30px;
+}
+
+.daily_inspiration .sns_list.flex {
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.sns_list .sns {
+    margin-right: 50px;
+    width: 50px;
+    height: 50px;
+    background-image: url(./img/sns_icon.png);
+    background-size: 900%;
+}
+
+
+.sns_list .sns:nth-child(1) {
+    background-position: -13px -9px;
+}
+.sns_list .sns:nth-child(2) {
+    background-position: -162px -9px;
+}
+.sns_list .sns:nth-child(3) {
+    background-position: -241px -9px;
+}
+.sns_list .sns:nth-child(4) {
+    background-position: -162px -78px;
+}
+.sns_list .sns:nth-child(5) {
+    background-position: -88px -78px;
+}
+.sns_list .sns:nth-child(6) {
+    margin-right: 0;
+    background-position: -320px -146px;
+}
+
+
+/* footer */
+
+.footer {
+    position: relative;
+}
+
+.footer_menu_list {
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    flex-basis: 10%;
+    margin-bottom: 30px;
+    /* border-top: 1px solid var(--colorLightGray); */
+    /* border-bottom: 1px solid var(--colorLightGray); */
+    text-align: center;
+}
+
+.footer_menu_list .menu {
+    flex-basis: 110px;
+    flex-grow: 1;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    height: 25px;
+    text-align: center;
+    border-top: 1px solid var(--colorLightGray);
+}
+
+
+.footer_menu_list .menu a {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.footer_guide {
+    color: var(--colorGray);
+    text-align: center;
+}
+
+.footer_guide p,
+.footer_guide .address {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+.footer_guide .subscribe a {
+    color: var(--colorGray);
+    text-decoration: underline;
+}
+
+.footer_guide .recieve_mail{
+    margin: 20px 0;
+}
+
+.footer_guide .address {
+    padding-bottom: 150px;
+    font-style: normal;
+}

@@ -1,0 +1,410 @@
+:root {
+    --colorBlack: black;
+    --colorBlue: #ccdee2;
+    --colorDeepBlue: #9dbcc5;
+    --colorPink: #fac0be;
+    --colorDeepPink: #f0857e;
+    --colorYellow: #ffedcc;
+    --colorDeepYellow: #fbe5a9;
+
+}
+
+a {
+    color: var(--colorBlack);
+    text-decoration: none;
+}
+
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px 200px 50px;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    min-width: 400px;
+    height: 650px;
+    background-color: #ccdee2;
+    z-index: -1;
+}
+
+.fourGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fourGrid.header {
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 40px;
+    margin-bottom: 80px;
+}
+
+.header .main_log {
+    width: 90px;
+    height: 100px;
+}
+
+.main_log .bar {
+    margin-bottom: 13px;
+    width: 100%;
+    height: 15px;
+    background-color: var(--colorBlack);
+}
+
+.main_log .bar2 {
+    width: 60%;
+}
+
+
+.main_log .bar3 {
+    width: 30%;
+    margin-bottom: 0;
+}
+
+
+.header .main_title {
+    justify-self: start;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header .header__column:nth-child(3) {
+    justify-self: end; /*안먹힘*/
+    /* background-color: red; */
+}
+
+.search {
+    margin-bottom: 60px;
+    font-size: 0;
+}
+
+.search .search_bar {
+    position: relative;
+    width: 120px;
+    border: 0;
+    border-bottom: 2px solid var(--colorBlack);
+}
+
+.search .search_btn {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    outline: 0;
+    background-image: url(https://en.pimg.jp/032/461/659/1/32461659.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.header__nav .sns {
+    min-width: 145px;
+    font-size: 0;
+}
+
+.sns .icon {
+    display: inline-block;
+    margin-right: 5px;
+    width: 32px;
+    height: 33px;
+    background-size: 740%;
+    background-image: url(https://img.freepik.com/free-vector/social-media-icons_1057-4794.jpg?size=338&ext=jpg);
+}
+
+.sns .facebook_icon {
+    background-position: -10px -9px;
+}
+
+.sns .twitter_icon {
+    background-position: -196px -46px;
+}
+
+.sns .instagram_icon {
+    background-position: -47px -9px;
+}
+
+
+
+.sns .youtube_icon {
+    margin-right: 0;
+    background-position: -158px -46px;
+}
+
+
+.header__nav a {
+    font-weight: 700;
+    line-height: 30px;
+}
+
+/* 
+아이콘 주소
+https://image.freepik.com/free-vector/social-media-logotype-collection_1083-145.jpg */
+.grid .fourGrid,
+.grid .twoGrid {
+    position: relative;
+    display: grid;
+}
+
+.grid .fourGrid {
+    grid-auto-rows: minmax(40px, auto);
+    grid-gap: 20px;
+    margin-bottom: 90px;
+}
+
+.fourGrid .list {
+    border-bottom: 7px solid var(--colorBlack);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+.grid .twoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-row-gap: 60px;
+}
+
+.twoGrid .grid_item {
+    display: grid;
+    grid-area: span 2 / span 2;
+}
+
+.twoGrid .showPoster {
+    grid-template-rows: 65% 35%;
+    background-image: url(https://s3.ap-south-1.amazonaws.com/hsdreams1/pins/2019/01/medium/00ba257ec0b5de076471c42e8bd0ac80.jpeg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.showPoster .poster_title{
+    margin-top: 150px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.showPoster .desc{
+    background-color: var(--colorDeepBlue);
+    opacity: 0.8;
+    text-align: center;
+}
+
+.showPoster .desc span{
+    display: block;
+    margin-top: 40px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.grid_item.program {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.program .grid_content {
+    padding: 25px;
+}
+
+.program .grid_content:nth-child(2),
+.program .grid_content:last-child {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.program .grid_content .title{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-width: 10px 0 2px 0;
+    border-style: solid;
+    border-bottom-color: var(--colorBlack);
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.program .grid_content:first-child {
+    background-color: var(--colorPink);
+}
+
+.program .grid_content:first-child .title {
+    border-top-color: var(--colorDeepPink)
+}
+
+.program .grid_content:nth-child(2) {
+    grid-row: span 2;
+}
+
+.program .grid_content:nth-child(2) .title {
+    border-top-color: var(--colorDeepPink);
+    border-bottom: none;
+    text-align: center;
+}
+
+.program .grid_content:nth-child(2) .period {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+
+.program .grid_content:nth-child(2) .cnt.grid {
+    grid-template-columns: repeat(7, minmax(min-content, 14.2%));
+    justify-items: center;
+}
+
+.program .grid_content:nth-child(2) .cnt.grid span {
+    line-height: 35px;
+}
+
+.selected {
+    width: 100%;
+    background-color: var(--colorPink);
+    text-align: center;
+}
+
+.program .grid_content:nth-child(3) {
+    background-color: var(--colorYellow);
+}
+
+.program .grid_content:nth-child(3) .title {
+    border-top-color: var(--colorDeepYellow)
+}
+
+.program .grid_content:nth-child(4) {
+    background-color: var(--colorBlue);
+}
+
+.program .grid_content:nth-child(4) .title {
+    border-top-color: var(--colorDeepBlue)
+}
+
+.program .grid_content:last-child {
+}
+
+.program .grid_content:last-child .title {
+    margin-bottom: 5px;
+    border-top: none;
+    border-bottom: 10px solid var(--colorDeepPink);
+    font-size: 15px;
+}
+
+.program .grid_content:last-child .cnt span {
+    margin-right: 5px;
+    background-color: var(--colorPink);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cast.grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+.cast .cast1 {position: relative;}
+.cast .cast2 {position: relative;}
+
+.cast1 .picture,
+.cast2 .picture {
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    font-size: 22px;
+}
+
+.cast1 .picture {
+    background-image: url(https://media.npr.org/assets/img/2018/04/12/gettyimages-562624207_wide-6be6bb80c06fa22fd6e9a077d5878afefc69574e-s1600-c85.jpg);
+}
+
+.cast2 .picture {
+    background-image: url(http://133.242.151.193/pmstudio/images/Billie-Eilish12.jpg);
+}
+
+.cast1 .tag,
+.cast2 .tag {
+    position: absolute;
+    top: 371px;
+    left: 0;
+    padding: 0 30px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.cast1 .tag {
+    background-color: var(--colorDeepPink);
+}
+
+.cast2 .tag {
+    background-color: var(--colorDeepBlue);
+    
+}
+
+.cast1 .cnt,
+.cast2 .cnt {
+    padding: 0 30px 30px;
+    height: 160px;
+}
+
+.cast1 .cnt {
+    background-color: var(--colorPink);
+}
+
+.cast2 .cnt {
+    background-color: var(--colorBlue);
+    
+}
+
+
+.cast1 .cnt .title,
+.cast2 .cnt .title {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.cast1 .cnt .desc,
+.cast2 .cnt .desc {
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: lowercase;
+}
+
+/* 
+이미지01 락앤롤
+
+
+이미지02 빌리엔젤
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

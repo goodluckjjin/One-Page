@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.signUp_page.grid {
+    position: relative;
+    grid-template-rows: 10% 90%;
+    width: 406px;
+    max-width: 100%;
+    height: 700px;
+    background: #bdc3c7;
+    background: linear-gradient(to bottom, black, #3e5770);
+    background: -webkit-linear-gradient(to bottom, black, #3e5770);
+}
+
+
+/* top */
+.top.flex {
+    display: grid;
+    grid-template-columns: 15% 75% 10%;
+    align-items: center;
+}
+
+.top .close_btn {
+    position: relative;
+    width: 100%;
+}
+
+.close_btn .line {
+    position: absolute;
+    left: 25%;
+    width: 24px;
+    height: 4px;
+    background-color: #fff;
+}
+
+.close_btn .line1 {
+    transform: rotate(45deg);
+}
+
+.close_btn .line2 {
+    transform: rotate(-45deg);
+}
+
+.top .page_name {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.top .camera_btn {
+    width: 34px;
+    height: 30px;
+    background-color: skyblue;
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Kleo-hbBFAF8g8Gq64fKx35Jup9b6effgCHpm6GWWD6FanG-);
+     */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfiio9PEn-KWnlm0UYlGCV2EV4SfHQ4JeZoj5MCOcr0AR0Y-rS);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* bottom */
+.bottom {
+    position: relative;
+    padding: 0 15%;
+}
+
+.background.grid {
+    width: 100%;
+    height: 90%;
+    grid-template-rows: 35% 65%;
+}
+
+.background .back_img {
+    background-image: url(https://cdn.pixabay.com/photo/2019/06/06/21/51/cat-4257074_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.background .next_step.flex {
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #eacda3;
+    background: -webkit-linear-gradient(to bottom, #eacda3, #000);
+    background: linear-gradient(to bottom, #eacda3, #000);
+
+}
+
+.next_btn {
+    height: 50px;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700; 
+}
+
+
+.signUp_box.grid {
+    grid-template-rows: repeat(3, 1fr);
+    position: absolute;
+    top: 175px;
+    left: 25px;
+    padding: 0 20px;
+    width: 255px;
+    height: 53%;
+    background-color: #fff;
+}
+
+.signUp_box .grid_item {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray
+}
+
+.signUp_box .grid_item .tit {
+    font-size: 12px;
+    color: lightgray;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.signUp_box .grid_item .icon {
+    grid-row: span 2;
+}
+
+.icon {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 16px;
+    margin-left: 15px;
+    padding: 0;
+    background: #000;
+}
+.icon:before, .icon:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+.icon:before {
+    border: 10px solid transparent;
+    border-top-color: #fff;
+}
+.icon:after {
+    left: 2.3px;
+    border: 8px solid transparent;
+    border-top-color: #000;
+}
+
+
+
+.signUp_box .grid_item input {
+    border: none;
+    color: black;
+    font-size: 17px;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,127 @@
+:root {
+    --lightGrayColor: rgba(0, 0, 0, 0.6);
+    --grayColor: #363d3f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body,
+html{
+    height: 100%;
+}
+
+body {
+    max-height: 100%;
+    background-color: white;
+    color: var(--grayColor);
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-transform: lowercase;
+}
+
+.header .header__square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 14px;
+    background-color: var(--grayColor);
+}
+
+.main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100%;
+    place-items: center;
+    height: calc(100% - 100px);
+}
+
+.main .main__info {
+    margin-left: 200px;
+    width: 100%;
+}
+
+.main .main__titles {
+    margin-bottom: 15px;
+}
+
+.main__titles .main__pre-title {
+    text-transform: uppercase;
+}
+
+.main__titles .main__title {
+    font-size: 150px;
+    white-space: nowrap;
+    letter-spacing: 8px;
+}
+
+.main__titles .main__subtitle {
+    font-size: 12px;
+    color: var(--lightGrayColor);
+    font-weight: 600;
+}
+
+.main .main__link {
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--lightGrayColor);
+    font-size: 14px;
+}
+
+.main .main__photo {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-image: url(https://picsum.photos/1000/1000/?ramdom1);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main__photo .main__nav {
+    background-color: white;
+    padding: 25px 50px;
+    font-weight: 600;
+}
+
+.main__nav .nav__arrow:first-child {
+    margin-right: 10px;
+}
+
+.main__nav .nav__arrow:last-child {
+    margin-left: 10px;
+}

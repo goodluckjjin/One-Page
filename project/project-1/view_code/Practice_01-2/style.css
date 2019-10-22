@@ -1,0 +1,173 @@
+body {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, li, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.threeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header .header__column {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_logo {
+    width: 52px;
+    height: 100px;
+    background-image: url(./img/main_logo.JPG);
+    background-size: 100%;
+    background-position: center center;
+    text-indent: -9999px;
+}
+
+.header__column .header__nav {
+    overflow: hidden;
+}
+
+.header__column .header__nav div {
+    float: left;
+    padding-left: 15px;
+    width: 10vw;
+    height: 50px;
+    background-color: yellow;
+}
+
+.header__column .header__nav div a {
+    display: block;
+    text-indent: -9999px;
+}
+
+.grid {
+    position: relative;
+    grid-auto-rows: minmax(200px, auto);
+    /* grid-auto-rows: 200px; */
+    grid-gap: 20px;
+}
+
+.grid .grid_item {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #a1a1a1;
+    background-size: cover;
+    background-position: center center;
+}
+
+.grid .grid_item:first-child {
+    padding: 0;
+    grid-area: span 2 / span 3;
+    background-image: url(https://media.newyorker.com/photos/59097a0c1c7a8e33fb38ff18/master/w_727,c_limit/National-Book-Awards-Non-Fiction.jpg);
+}
+
+.grid .grid_item:nth-child(2) {
+    position: absolute;
+    /* 주석 처리 된 거 1개 사용한 거랑 아래처럼 준거랑 동일하다.. */
+    /* grid-column: 3 / span 1; */
+    grid-area: 1 / 3 / span 1 /span 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50vh;
+    background-color: pink;
+}
+
+
+.grid .grid_item:nth-child(3) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(4) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(5) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(6) {
+    grid-row: span 2;
+}
+
+.grid_item:nth-child(6) .picture {
+    background-image: url(https://www.miamibookfair.com/wp-content/uploads/2015/09/nba-winner-400.jpg);
+}
+
+
+.grid .grid_item:nth-child(7) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(8) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(9) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(10) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(11) {
+    grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(12) {
+grid-row: span 2;
+}
+
+.grid .grid_item:nth-child(3) {
+    grid-row: span 2;
+}
+
+.grid_item .preview .title {
+    margin-bottom: 40px;
+    color: black;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.grid_item .preview .desc,
+.grid_item .more a {
+    color: #a1a1a1;
+    font-size: 20px;
+}
+
+.grid_item .preview .desc {
+    line-height: 1.5;
+    /* text-overflow: ellipsis; */
+}
+
+.grid_item .more {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #a1a1a1;
+    line-height: 60px;
+    text-indent: 40px;
+}
+
+.grid_item .more a {
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+}

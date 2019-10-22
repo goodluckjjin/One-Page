@@ -1,0 +1,159 @@
+:root {
+    --grayColor: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 50px 0 50px 50px;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__title {
+    font-size: 28px;
+}
+
+.header__nav .header__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-gap: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.header__list .header__list-item:first-child {
+    color: var(--grayColor);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;justify-content: center;
+    height: 100%;
+}
+
+.content .content__title {
+    font-size: 86px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.content .content__text {
+    color: var(--grayColor);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content .view-more {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.view-more .view-more__icon {
+    background-color: var(--grayColor);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.view-more__icon svg {
+    fill: white;
+}
+
+.view-more .view-more__text {
+    text-transform: uppercase;
+    color: var(--grayColor);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.items {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+.item .item__wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.item__titles {
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+
+.item .item__pre-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--grayColor);
+}
+
+.item .item__title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.item img {
+    width: 100%;
+    height: 350px;
+}
+
+.item .item__number {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--grayColor);
+}
+
+.btns {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+}
+
+.btns .btn:first-child {
+    margin-right: 10px; 
+}
+
+.btns .btn:first-child svg {
+    fill: var(--grayColor);
+}

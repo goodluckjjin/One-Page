@@ -1,0 +1,144 @@
+:root {
+    --grayColor: rgba(0, 0, 0, 0.5);
+    --borderBottom: 3px solid black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.header .header__title {
+    font-size: 62px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.header .header__subtitle {
+    font-size: 22px;
+}
+
+.header .header__title span,
+.header .header__subtitle span {
+    display: block;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 50px;
+}
+
+.content .content__sidebar {
+    grid-column: span 4;
+}
+
+.content .content__projects {
+    grid-column: span 7;
+}
+
+.box {
+    margin-bottom: 50px;
+}
+
+.box .box__title {
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: var(--borderBottom);
+}
+
+.box__categories .box__category {
+    margin-bottom: 10px;
+    color: var(--grayColor);
+    font-weight: 600;
+}
+
+.box__categories .box__category:last-child {
+    margin-bottom: 0;
+}
+
+.box__categories .box__category--selected {
+    color: black;
+}
+
+.box .box__text {
+    line-height: 1.5;
+}
+
+.content__projects .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.project {
+    padding-bottom: 30px;
+    border-bottom: var(--borderBottom);
+}
+
+.project img {
+    width: 100%;
+    max-height: 269px;
+    margin-bottom: 15px;
+} 
+
+.project .project__title {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.project .project__author {
+    color: var(--grayColor);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project .project__data,
+.project .project__location {
+    color: var(--grayColor);
+    display: block;
+}
+
+.project .project__data {
+    font-weight: 300;
+}
+
+
+.project .project__location {
+    margin-bottom: 30px;
+}
+
+.project .project__intro {
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
