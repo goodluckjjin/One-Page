@@ -161,7 +161,7 @@
 								</div>
 							</li>
 							<li class="slider slider_02">
-								<a class="project_thumb" href="./project/project-2/preview.html"><img src="./img/project-2-bg.jpg" alt=""></a>
+								<a class="project_thumb" href="./project/project-2/preview.html"><img src="./img/project2.jpg" alt=""></a>
 								<div class="project_content">
 									<p class="project_title">Movie App</p>
 									<p class="project_desc">React를 이용한 movie API를 불러오는 간단한 사이트</p>
@@ -186,10 +186,10 @@
 								</div>
 							</li>
 							<li class="slider slider_04">
-								<a class="project_thumb" href="./project/project-4/preview.html"><img src="https://image.freepik.com/free-photo/top-view-water-touching-sand-beach_23-2148226583.jpg" alt=""></a>
+								<a class="project_thumb" href="./project/project-4/preview.html"><img src="./img/project-4-bg.JPG" alt=""></a>
 								<div class="project_content">
 									<p class="project_title">FoodForME</p>
-									<p class="project_desc">React를 이용하는 Front-end 역할을 맡은 간단한 사이트</p>
+									<p class="project_desc">React JS를 사용하여 Front-end 역할을 수행해 본 간단한 사이트 (진행중)</p>
 									<div class="project_tag">
 										<span>React</span>
 										<span>Javascript</span>
@@ -203,10 +203,10 @@
 							<button type="button" class="slider_btn next"></button>
 						</div>
 						<div class="slider_dot">
-							<span class="dot"></span>
-							<span class="dot"></span>
-							<span class="dot"></span>
-							<span class="dot"></span>
+							<span class="dot" data-tab="slider_01"></span>
+							<span class="dot" data-tab="slider_02"></span>
+							<span class="dot" data-tab="slider_03"></span>
+							<span class="dot" data-tab="slider_04"></span>
 						</div>
 					</div>
 				</div>
@@ -416,24 +416,31 @@
 
 			var slider = $('.slider');
 			console.log("slider = ", slider);
+			var dot = $('.dot');
+			console.log("dot=", dot);
 
 			//current position
 			var pos = 0;
 
 			//number of slides
 			var sliderNum = slider.length;
+			//number of dots
+			var dotsNum = dot.length;
 
 			slider.eq(pos).addClass('active');
-			console.log("slider.eq(pos) = ", slider.eq(pos));
-			console.log($('.slider').get(0));
+			// console.log("slider.eq(pos) = ", slider.eq(pos));
+			// console.log($('.slider').get(0));
+			dot.eq(pos).addClass('active');
+			// console.log(`dot.eq(pos).addClass('active')= ${dot.eq(pos)}`);
 
 			//get()과 eq() 둘다 배열로 가져오는데 무슨차이인가? 
 			// 1. 아마 가져오는 형태의 차이같다. 노드와 객체?
 			// 2. get()메서드는 addClass사용이 안된다
-			var currentSlider = slider.get(pos);
-			var currentSlider2 = slider.eq(pos);
-			console.log("slider.get(pos) = ", currentSlider);
-			console.log("slider.eq(pos) = ", currentSlider2);
+			// var currentSlider = slider.get(pos);
+			// var currentSlider2 = slider.eq(pos);
+			// console.log("slider.get(pos) = ", currentSlider);
+			// console.log("slider.eq(pos) = ", currentSlider2);
+			
 			
 
 			//next slide
@@ -446,22 +453,52 @@
 				sliderLeft();
 			})
 
-			//active도 잘 되고 내가 원하는 요소도 console로 잘 나오는데 왜 전체 요소에 준 display none이 안먹나?
 			function sliderLeft(){
 				pos--;
 				if(pos==-1) {pos = sliderNum-1;}
 				slider.removeClass('active');
 				slider.eq(pos).addClass('active');
-				
+				dot.removeClass('active');
+				dot.eq(pos).addClass('active');
 			}
 
 			function sliderRight(){
 				pos++;
 				if(pos==sliderNum) {pos=0;}
-				console.log("rightbtn눌렀을때slider.get(pos)값  = ", slider.get(pos));
+				// console.log("rightbtn눌렀을때slider.get(pos)값  = ", slider.get(pos));
 				slider.removeClass('active');
 				slider.eq(pos).addClass('active');
+				dot.removeClass('active');
+				dot.eq(pos).addClass('active');
 			}
+
+			//slider dot
+			dot.click(function(){
+				var pos=dot.index(this);
+				// console.log("pos",pos);
+				dot.removeClass('active');
+				slider.removeClass('active');
+				dot.eq(pos).addClass('active');
+				slider.eq(pos).addClass('active');
+			})
+					
+
+			// for(var i=0; i<sliderNum; i++){
+			// 	dot.eq(i).click(function(){
+					
+			// 		dot.removeClass('active')
+			// 		slider.removeClass('active');
+			// 		$(this).addClass('active')
+			// 		slider.eq(i).addClass('active')
+			// 		console.log("slider.eq(i) = ",slider.eq(i));
+			// 		console.log("dot.eq(i) = ",dot.eq(i));
+
+			// 	})
+			// }
+			
+			// dot.eq(pos).click(function(){
+			// 	console.log(pos);
+			// })
 		});
 		
 		
@@ -589,71 +626,7 @@
 				$(".menuWrap").removeClass("active");
 				$(".mobile_btn").removeClass("active");
 			});
-		});
-
-		
-
-
-		// String.prototype.testMethod = function(){
-		// 	console.log('This is the String.prototype.testMethod()');
-		// };
-		// var str = "this is test";
-		// str.testMethod();
-		// console.dir(String.prototype); // String.prototype에 testMethod()가 추가되었다
-		// console.dir(Object.prototype); // Object.prototype에는 추가가 되지 않는다.
-		//추가로 글쓰기 알게된점
-		// function Person(name){
-		// 	this.name = name;
-		// }
-
-		// Person.prototype.country = 'Korea';
-		// console.log(Person.prototype.constructor);
-		// var foo = new Person('foo');
-
-		// //디폴트 변경
-		// Person.prototype={otherCountry : 'Franch'}; //객체로 타입변환
-		// console.log(Person.prototype.constructor); // Person()함수와 관ㄱ
-		
-
-		// var bar = new Person('bar');
-
-		// console.log('test', bar.country);
-		// console.log(foo.country);
-		
-		// console.log(foo.constructor);
-		// console.log(bar.constructor);
-		
-
-		//질문 1
-		// console.log("This is global context"); // 전역 컨텍스트 or 전역 실행 컨텍스트
-		
-		// function ExContent1(){
-		// 	console.log("This is ExContext1"); 
-		// };
-
-		// function ExContext2(){
-		// 	ExContent1();
-		// 	console.log("This is ExContext2");
-		// };
-
-		// ExContext2();
-
-		
-		function execute(param1, param2){	//1. 실행 컨텍스트 생성, 자바스크립트 엔진이 실행에 필요한 여러가지 정보를 담을 활성 객체 생성
-											//2. param1, param2가 들어왔을 경우의 활성 객체의 상태를 표현한다고? 뭔말이지?
-											//3. 컨텍스트 유효범위 나타내는 스코프 정보 생성 => 활성 객체가 이 함수의 인자나 변수에 접근할 준비완료
-			var a=1; b=2;					//4. a, b변수, 함수func() 생성 => 각각의 프로퍼티가 만들어지고 값이 할당된다.(값 할당안되면 undefined)
-			function func() {
-				return a+b;
-			}
-			return param1 + param2 + func();
-		}
-
-		execute(3, 4); 
-
-		
-
-		
+		});	
 
 	</script>
 </body>
