@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
+@import 'reset.css';
+@import 'layout.css';
+/* header */
+
+.lang{
+    float: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 5px;
+    /* width: 8%; */
+}
+
+.lang .ko,
+.lang .en{
+    float: left;
+    /* display: block; */
+    width: 24px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.lang .ko{
+    margin-right: 5px;
+    background-image: url(../img/flag_KR_square.png);
+}
+
+.lang .en{
+    background-image: url(../img/flag_EN_square.png);
+}
+
+.nav{
+    float: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav a{
+    padding-left: 15px;
+    font-size: 0.7rem;
+}
+
+.nav a.insta{
+    display: inline-block;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 10px;
+    width: 23px;
+    height: 20px;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 300px;
+    vertical-align: middle;
+}
+
+.insta:before{
+    position: absolute;
+    content: "";
+    left: -13px;
+    top: -2px;
+    width: 1px;
+    height: 22px;
+    background-color: black;
+}
+
+
+
+.main_logo{
+    float: left;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 122px;
+    height: 41px;
+    text-indent: -9999px;
+    background-image: url(../img/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.menu{
+    float: right;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+}
+
+.menu li a.shop{
+    position: relative;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    color: red;
+}
+
+.menu li a.shop:before,
+.menu li a.shop:after{
+    position: absolute;
+    content: "";
+    top: 1rem;
+    width: 0;
+    height: 0;
+    border:10px solid transparent;
+    border-width: 8px 12px;
+}
+
+.menu li a.shop:before{
+    left: 5px;
+    border-left-color: red;
+}
+.menu li a.shop:after{
+    left: 57px;
+    border-right-color: red;
+
+}
+
+/* js-active -header */
+.mobile_btn{
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    border: 0;
+    background-color: transparent;
+}
+
+.mobile_btn .line{
+    display: block;
+    width: 37px;
+    height: 2px;
+    background-color: #618935;
+}
+
+.mobile_btn .line2{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.close_btn{
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    border: none;
+}
+/* absolute를 fixed로 바꾼 이유: top0을 줘도 맨 위에 안 붙어서 독립적으로 줘버림 */
+.close_btn .line{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 34px;
+    height: 2px;
+    background-color: black;
+}
+
+.close_btn .line1{
+    transform: rotate(45deg);
+}
+
+.close_btn .line2{
+    transform: rotate(-45deg);
+}
+
+/* main */
+.visual{
+    color: #fff;
+}
+
+.visual_title{
+    /*padding-top: 12rem;
+    padding-bottom: 3rem;*/
+    padding-top: 10vw;
+    padding-bottom: 3vw;
+    font-size: 2.5vw;
+}
+
+.visual .desc{
+    text-align: center;
+}
+
+.visual_title,
+.mc_title,
+.mc1 .desc,
+.mc2 .desc,
+.mc3 .desc{
+    margin: auto;
+    text-align: center;
+}
+
+
+.mc_title{
+    padding-bottom: 1rem;
+    font-size: 1.6vw;
+}
+
+
+
+.desc{
+    margin-bottom: 3rem;
+    font-size: 1vw;
+    line-height: 1.4vw;
+    letter-spacing: -0.5px;
+}
+
+
+/* mc1 */
+.mc1 .desc{
+    margin-bottom: 2.8rem;
+}
+
+.companyIntro{
+    display: block;
+    margin: auto;
+    width: 125px;
+    height: 2.2rem;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    color: #fff !important;
+    line-height: 35px;
+    text-align: center;
+    background-color: #ff7000;
+}
+
+
+.companyIntro:hover{
+    margin-bottom: 4rem;
+    border: 1px solid #ff7000;
+    color: #ff7000;
+    background-color: #fff;
+}
+
+.mc1 .bgc_img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+
+/* mc2 */
+.mc .pic_box{
+    float: left;
+    width: 23.5%;
+    margin-left: 2%;
+}
+
+.mc2 .pic_box1{
+    margin-left: 0;
+}
+
+.mc2 .pic,
+.mc3 .pic {
+    padding-top: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.mc2 .pic {
+    height: 0;
+}
+
+.mc2 .pic_tit,
+.mc3 .pic_tit{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.pic1{
+    background-image: url(../img/mc3.icon4.png);
+}
+
+.pic2{
+    background-image: url(../img/mc3.icon3.png);
+}
+
+.pic3{
+    background-image: url(../img/mc3.icon6.png);
+}
+
+.pic4{
+    background-image: url(../img/mc3.icon3.png);
+}
+
+
+
+/* mc3 */
+.mc3 .pic_box{
+    float: left;
+    margin-left: 2%;
+    width: 15%;
+}
+
+.mc3 .pic_box5{
+    margin-left: 0;
+}
+
+.mc3 .pic{
+    height: 185px;
+}
+
+.mc3 .pic5{
+    background-image: url(../img/mc3.icon5.png)
+}
+.mc3 .pic6{
+    background-image: url(../img/mc3.icon6.png)
+}
+.mc3 .pic7{
+    background-image: url(../img/mc3.icon3.png)
+}
+.mc3 .pic8{
+    background-image: url(../img/mc3.icon4.png)
+}
+.mc3 .pic9{
+    background-image: url(../img/mc3.icon5.png)
+}
+.mc3 .pic10{
+    background-image: url(../img/mc3.icon6.png)
+}
+
+/* mc4 */
+.sc1{
+    padding-bottom: 5rem;
+}
+
+.sc_title{
+    padding-bottom: 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.sc .desc{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+.sc1 .sc_title{
+    text-align: center;
+}
+
+.sc1 .press{
+    float: left;
+    margin-left: 2%;
+    width: 23.5%;
+    height: 365.6px;
+    background-color: #fff;
+}
+
+.sc1 .press1{
+    margin-left: 0;
+}
+
+.press .cnt{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.press .pic{
+    width: 100%;
+    height: 11.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.press1 .pic{
+    background-image: url(../img/mc4.box1.jpg);
+    background-size: 110%;
+}
+.press2 .pic{
+    background-image: url(../img/mc4.box2.jpg);
+    background-size: 146%;
+
+}
+.press3 .pic{
+    background-image: url(../img/mc4.box3.jpg);
+    background-size: 130%;
+}
+.press4 .pic{
+    background-image: url(../img/mc4.box4.jpg);
+    background-size: 128%;
+}
+
+.press .news{
+    margin-top: 1rem;
+    width: 50%;
+    height: 2rem;
+    text-indent: -9999px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.press1 .news{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-image: url(../img/logo.gif);
+}
+
+.press2 .news{
+    background-image: url(../img/5b10a3a8a0b8b.png);
+    background-size: 100%;
+}
+
+.press3 .news{
+    background-image: url(../img/5b10a43db000a.png);
+}
+
+.press4 .news{
+    background-image: url(../img/5b10a76f2a7a4.png);
+}
+
+.press .desc{
+    margin-bottom: 1rem;
+    height: 5rem;
+    font-weight:
+}
+
+.press .look{
+    display: block;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #ff7000;
+}
+
+.sc2 .sc_cnt .cnt{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.sc2 .sc_cnt .cnt1{
+    margin-top: 0;
+}
+
+.sc21,
+.sc22{
+    float: left;
+    width: 49%;
+}
+
+.sc21{
+    margin-right: 2%;
+}
+
+.sc2 .sc_cnt .cnt p,
+.sc2 .sc_cnt .cnt span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.sc2 .sc_cnt .cnt p{
+    width: 88%;
+    font-size: 0.8rem;
+}
+
+.sc2 .sc_cnt .cnt span{
+     width: 11%;
+    font-size: 0.6rem;
+
+}
+
+/* footer */
+.footer strong{
+    text-transform: uppercase;
+}
+
+.a3 .about{
+    color: #fff;
+}
+
+
+.a3{
+    float: left;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    /*margin-right: 8%;*/
+}
+
+.a3 p.about{
+    margin-bottom: 2rem;
+}
+
+
+.a3 p{
+    margin-bottom: 7px;
+    color: rgb(140, 140, 140);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.a3 p strong{
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: initial;
+}
+
+.a31{
+    width: 35%;
+}
+.a32{
+    width: 30%;
+}
+.a33{
+    width: 35%;
+}
+
+.personal{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    clear: both;
+    text-align: center;
+}
+
+.personal a{
+    padding: 3px 7.5px;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*~ 1200px 까지는 웹 */
+/*~ 992px~1199px 웹 사이즈에 맞추려면 992(최소width)에 맞춰서 확인한다 */
+@media only screen and (max-width: 1199px){
+}
+/* tablet 768~991 */
+/* 모든 태그는 초기값을 가진다.(0,0)이라든지. 그러므로 모바일 메뉴는 html에서 초기값을 설정해주고 display:none을 시키는 것이 흔적이 남지 않고 깔끔하다. */
+@media only screen and (max-width: 991px){
+    .container {
+        width: 100%;
+    }
+
+    .mobile_btn{
+        display: block;
+    }
+
+    .menuWrap{
+        display: none;
+    }
+    /* 웹화면일 떄, .menuWrap의 내용들은 보여야하는 상황이기 때문에 모바일일 때(안보여야할 때)에 직접 display: none을 준다  */
+
+
+    .menuWrap:before{  /* 모달창 */
+        z-index: 1;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+
+    .menu{   /* .menuWrap같은 경우 초기값이 남을 수 밖에 없는 상황. */
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 2rem;
+        background-color: #fff;
+    }
+    .menu{
+        float: inherit;
+    }
+
+    .menu li{
+        float: inherit;
+    }
+
+    .menu li a {
+        display: block;
+        line-height: inherit;
+    }
+
+    .close_btn{
+        z-index: 3;
+        display: block;
+    }
+
+    .menuWrap.active{
+        display: block;
+    }
+
+    .menuWrap:before{
+        display: block;
+    }
+
+
+    .visual_title, .mc_title {
+        font-size: 1.5rem;
+    }
+    .mc3 .pic_box {
+        width: 31%;
+    }
+
+    .mc3 .pic_box{
+        margin-left:0;
+    }
+
+
+    .mc3 .pic_box6,
+    .mc3 .pic_box9{
+        margin-left: 3.5%;
+        margin-right: 3.5%;
+    }
+
+    .mc3 .pic{
+        height: 0;
+        padding-top: 99%;
+    }
+
+    .sc1 .press {
+        width: 32%;
+    }
+
+    .sc1 .press4 {
+        display: none;
+    }
+
+}
+/*mc4만 다듬기*/
+@media only screen and (max-width: 893px){
+    .sc_cnt .cnt span {
+        display: none;
+    }
+}
+
+/* 모바일 가로버젼 481~767 */
+@media only screen and (max-width: 767px){
+    .mc2 .pic_box {
+        margin-bottom: 2rem;
+        width: 49%;
+    }
+
+    .mc2 .pic_box3 {
+        margin-left: 0;
+    }
+
+    .mc2 .pic_tit, .mc3 .pic_tit {
+        margin-top: 1rem;
+    }
+
+    .mc3 .pic_box {
+        margin-bottom: 2rem;
+        width: 48.2%;
+    }
+
+    .mc3 .pic_box6{
+        margin-right: 0;
+    }
+
+    .mc3 .pic_box8 {
+        margin-left: 3.5%;
+    }
+
+    .mc3 .pic_box9 {
+        margin-left: 0;
+    }
+
+    .sc1 .press {
+        float: none;
+        margin: auto;
+        width: 75%;
+        height: auto;
+    }
+
+    .press .pic {
+        height: 30rem;
+    }
+
+    .press .news {
+        height: 12rem;
+        background-size: 60%;
+    }
+
+    .press1 .news {
+        background-size: 55%;
+    }
+
+
+    .sc_cnt .cnt p {
+        font-size: 1.5rem;
+    }
+
+    .press .look {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .sc21, .sc22 {
+        float: none;
+        margin: auto;
+        width: 75%;
+    }
+    }
+
+    .sc_cnt .cnt span {
+
+    }
+/* 갤럭시 360 */
+/* 모바일 세로버젼 360~480 */
+@media only screen and (max-width: 480px){
+    .lang {
+        position: absolute;
+        float: inherit;
+        top: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: inherit;
+    }
+
+    .lang .ko {
+        margin-right: 2px;
+    }
+
+    .nav {
+        /* float: inherit; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /* width: inherit; */
+    }
+
+    .nav a {
+        float: left;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .sc1 .press {
+        width: 70%;
+    }
+
+    .press .news {
+        height: 4rem;
+    }
+
+    .press .pic {
+        height: 14rem;
+    }
+
+    .press1 .news {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sc_cnt .cnt p {
+        font-size: 1rem;
+    }
+
+    .press .look {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .sc1 .press {
+        margin: auto;
+        float: inherit;
+    }
+}
+

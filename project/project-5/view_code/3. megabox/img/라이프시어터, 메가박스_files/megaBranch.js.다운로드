@@ -1,0 +1,291 @@
+var megaBranch = {
+	mobileHome : "http://m.megabox.co.kr",
+	mobileHomeTest : "http://mcity.megabox.co.kr",
+	mobileHomeTest2 : "http://mcity2.megabox.co.kr",
+	menuArry : {
+		'movie' : 'movie',	// 영화 리스트
+		'movie-boxoffice' : 'movie',	// 박스오피스
+		'movie-scheduled' : 'movie',	// 상영예정작
+		'detail' : 'movie-detail',		// 영화상세
+		'movie-moviepost' : 'moviepost',				// 무비포스트
+		'movie-moviepost-detail' : 'moviepost-detail',	// 무비포스트 상세
+		'theater' : 'theater',			// 영화관안내
+		'theater-detail' : 'theater-detail',			// 영화관상세안내
+		'discountcard' : 'card',	// 할인카드안내
+		'store' : 'store',			// 스토어
+		'event' : 'event',			// 이벤트목록
+		'event' : 'event-detail',	// 이벤트상세
+		'center-notice' : 'notice',	// 공지사항
+		'terms' : 'terms',			// 이용약관
+		'privacy' : 'privacy',		// 개인정보처리방침
+		'bookingCinema' : 'booking&mBookingType=2',	// 빠른예매
+		'user-join' : 'user-join', 					// 회원가입
+		'user-dormant' : 'user-dormant', 			// 휴면계정복구
+		'user-find' : 'user-find',					// ID/PW찾기
+		'special' : 'special-detail',				// 특별관안내
+		'center-main' : 'center',				// 고객센터
+		'center-1on1' : '1on1'					// 1:1 문의
+	},
+
+	getServerURL: function(){
+		// 서버가 megact, megacity인 경우 mcity2로 이동, www인 경우 m 그외 mcity2로 이동
+		var hostname = location.hostname;
+		if (hostname.indexOf('megact') > -1) {
+	   		return megaBranch.mobileHomeTest;
+		}else if (hostname.indexOf('megacity') > -1 || hostname.indexOf('webstay') > -1) {
+	   		return megaBranch.mobileHomeTest2;
+	   	} else {
+	   		return megaBranch.mobileHome;
+	    }
+	},
+
+	getURL: function() {
+		// Request 객체 생성
+		var request = new Request();
+		// test 라는 파라메터 값을 얻기
+		var menuId = request.getParameter("menuId");
+		if(!menuId) menuId = request.getParameter("show");
+		if(menuId && !megaBranch.menuArry[menuId]) return '';
+		var param = "";
+		if(menuId && megaBranch.menuArry[menuId]){
+			param += "?menuId=" + megaBranch.menuArry[menuId];
+			if(menuId=='detail'){
+				var rtnShowMovieCode = request.getParameter("rtnShowMovieCode");
+				if(rtnShowMovieCode) param += "&movieCode=" + rtnShowMovieCode;
+				else param = "?menuId=movie";
+			}else if(menuId=='theater-detail'){
+				var cinema = request.getParameter("cinema");
+				if(cinema) param += "&cinema=" + cinema;
+				else param = "?menuId=theater";
+			}else if(menuId=='event'){
+				var eventId = request.getParameter("p2");
+				if(eventId) param += "&id=" + eventId;
+				else param = "?menuId=event";
+			}else if(menuId=='special'){
+				var screenType = request.getParameter("screenType");
+				if(screenType) param += "&cinema=" + screenType;
+				else param += "&cinema=10";
+			}else if(menuId=='bookingCinema'){
+				var rtnCinemaCode = request.getParameter("rtnCinemaCode");
+				if(rtnCinemaCode) param += "&cinemaCode1=" + rtnCinemaCode;
+			}else if(menuId=='movie-moviepost-detail'){
+				var postId = request.getParameter("postId");
+				if(postId) param += "&postId=" + postId;
+			}else if(menuId=='center-notice'){
+				var p2 = request.getParameter("p2");
+				if(p2) param += "-detail&id=" + p2;
+			}
+		}
+		var moveURL = megaBranch.getServerURL() + param;
+		var _osVersion = megaBranch.osVersionType();
+
+		if (_osVersion == 'android') {
+			window.MegaBox.nativeExcute("common", "10", JSON.stringify({"link": moveURL}));
+		}else if(_osVersion == 'ios'){
+			var moveIOSURL = megaBranch.cutomReplaceAll(Base64.URLEncode(JSON.stringify({category:"common", type:"10", data: {"link": moveURL}})), "+", "%2B");
+			window.location = "megaboxJsCall://"+moveIOSURL;
+		}else{
+			return moveURL;
+		}
+	},
+
+	goToMobileWeb: function(){
+		// 모바일 웹 이동 스크립트 (모바일에서 PC버전 보기 허용 쿠키 값 변경 )
+		document.cookie = 'FROM_MOBILE_WEB=' + escape('N') + '; domain=megabox.co.kr';
+		var moveURL = megaBranch.getURL();
+		if(moveURL){
+			location.href = moveURL;
+		}else{
+			location.href = megaBranch.getServerURL();
+		}
+	},
+
+	osVersionType : function() {
+		var userAgent = navigator.userAgent;
+		if(userAgent.match(/MegaBox\/ANDROID/i)){
+			return 'android';
+		}else if(userAgent.match(/MegaBox\/IOS/i)){
+			return 'ios';
+		}else if( userAgent.match(/Android/i) || userAgent.match(/ANDROID/i)) {
+			return 'android_web';
+		} else if (userAgent.match(/iPhone/i)
+				|| userAgent.match(/iPad/i)
+				|| userAgent.match(/iPod/i)) {
+			return 'ios_web';
+		} else {
+			return 'other';
+		}
+	},
+
+	/**
+	 * replaceAll기능
+	 * @param string
+	 * @param pattnStr
+	 * @param chngStr
+	 * @returns {String}
+	 */
+	cutomReplaceAll: function (string, pattnStr, chngStr) {
+		var retsult = "";
+		var trimStr = string.replace(/(^\s*)|(\s*$)/g, "");
+
+		if (trimStr && pattnStr != chngStr) {
+
+			retsult = trimStr;
+
+			while (retsult.indexOf(pattnStr) > -1) {
+				retsult = retsult.replace(pattnStr, chngStr);
+			}
+		}
+
+		return retsult;
+	}
+}
+
+/**
+ * Custom Base64
+ */
+var Base64 = {
+	// private property
+	_keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+	// public method for encoding
+	encode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+		var i = 0;
+
+		input = this._utf8_encode(input);
+
+		while (i < input.length) {
+
+			chr1 = input.charCodeAt(i++);
+			chr2 = input.charCodeAt(i++);
+			chr3 = input.charCodeAt(i++);
+
+			enc1 = chr1 >> 2;
+			enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+			enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+			enc4 = chr3 & 63;
+
+			if (isNaN(chr2)) {
+				enc3 = enc4 = 64;
+			} else if (isNaN(chr3)) {
+				enc4 = 64;
+			}
+
+			output = output +
+				this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) +
+				this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+		}
+
+		return output;
+	},
+
+	// public method for decoding
+	decode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3;
+		var enc1, enc2, enc3, enc4;
+		var i = 0;
+
+		input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+		while (i < input.length) {
+
+			enc1 = this._keyStr.indexOf(input.charAt(i++));
+			enc2 = this._keyStr.indexOf(input.charAt(i++));
+			enc3 = this._keyStr.indexOf(input.charAt(i++));
+			enc4 = this._keyStr.indexOf(input.charAt(i++));
+
+			chr1 = (enc1 << 2) | (enc2 >> 4);
+			chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+			chr3 = ((enc3 & 3) << 6) | enc4;
+
+			output = output + String.fromCharCode(chr1);
+
+			if (enc3 != 64) {
+				output = output + String.fromCharCode(chr2);
+			}
+			if (enc4 != 64) {
+				output = output + String.fromCharCode(chr3);
+			}
+
+		}
+		output = this._utf8_decode(output);
+		return output;
+	 },
+
+	 // private method for UTF-8 encoding
+	 _utf8_encode : function (string) {
+		 string = string.replace(/\r\n/g,"\n");
+		 var utftext = "";
+		 for (var n = 0; n < string.length; n++) {
+			 var c = string.charCodeAt(n);
+			 if (c < 128) {
+				 utftext += String.fromCharCode(c);
+			 } else if((c > 127) && (c < 2048)) {
+				 utftext += String.fromCharCode((c >> 6) | 192);
+				 utftext += String.fromCharCode((c & 63) | 128);
+			 } else {
+				 utftext += String.fromCharCode((c >> 12) | 224);
+				 utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+				 utftext += String.fromCharCode((c & 63) | 128);
+			 }
+		 }
+		 return utftext;
+	},
+
+	// private method for UTF-8 decoding
+	_utf8_decode : function (utftext) {
+		var string = "";
+		var i = 0;
+		var c = c1 = c2 = 0;
+		while ( i < utftext.length ) {
+			c = utftext.charCodeAt(i);
+			if (c < 128) {
+				string += String.fromCharCode(c);
+				i++;
+			} else if((c > 191) && (c < 224)) {
+				c2 = utftext.charCodeAt(i+1);
+				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+				i += 2;
+			} else {
+				c2 = utftext.charCodeAt(i+1);
+				c3 = utftext.charCodeAt(i+2);
+				string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+				i += 3;
+			}
+		}
+		return string;
+	},
+
+	URLEncode : function (string) {
+		return escape(this.encode(string));
+	},
+
+	// public method for url decoding
+	URLDecode : function (string) {
+		return this.decode(unescape(string));
+	}
+};
+
+function Request() {
+	// getParameter 펑션
+	this.getParameter = function(param) {
+		var requestParam = "";
+		// 현재 주소를 decoding
+		var url = unescape(location.href);
+		// 파라미터만 자르고, 다시 &그분자를 잘라서 배열에 넣는다.
+		var paramArr = (url.substring(url.indexOf("?") + 1, url.length)).split("&");
+
+		for (var i = 0; i < paramArr.length; i++) {
+			var temp = paramArr[i].split("="); // 파라미터 변수명을 담음
+			if (temp[0].toUpperCase() == param.toUpperCase()) {
+				// 변수명과 일치할 경우 데이터 삽입
+				requestParam = paramArr[i].split("=")[1];
+				break;
+			}
+		}
+		return requestParam;
+	}
+}

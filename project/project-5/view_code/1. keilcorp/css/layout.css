@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+a:link,
+a:visited {
+    color: #212121;
+	text-decoration: none;
+}
+
+button {
+	outline: none; /*클릭했을 떄 테두리 제거*/
+	cursor: pointer;
+}
+
+.point_color_green{
+    color: rgb(137, 198, 125);
+    font-weight: 700;
+}
+
+.point_color_blue{
+    color: rgb(32, 92, 168);
+    font-weight: 700;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 1250px; /*국가정부기관에서 주로 사용하는 너비: 980px*/
+    height: 100%;
+}
+
+.header{
+    width: 100%;
+    z-index: 1;
+}
+
+.header.active{
+    position:fixed;
+    top:0;
+}
+
+/* 스크롤을 내렸을 떄 .active라는 클래스를 주어 상단에 메뉴를 고정 */
+
+.topHeader{
+    background-color: #f1f1f1;
+}
+
+.bottomHeader{
+    background-color: #fff;
+}
+
+section{
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main{
+    /*margin-top: 7.68rem;*/
+}
+.visual{
+    /*height: 720px;*/
+    background-image: url(../img/visual.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mc1{
+    padding-bottom: 0;
+
+}
+
+.mc2{
+    background-image: url(../img/mc2.bg.jpg);
+    background-attachment: fixed;
+}
+
+.mc3{
+    background-image: url(../img/mc3.bg.jpg);
+    background-attachment: fixed;
+}
+
+.mc2,
+.mc3,
+.mc4{
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+.mc2:before,
+.mc3:before,
+.mc4:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.mc4{
+    background-image: url(../img/mc4.bg.jpg);
+}
+
+.footer{
+    font-size: 0.74rem;
+    color: #fff;
+    background-color: rgba(56,56,56,1);
+}
+
+.hidden {
+    overflow: hidden;
+    position: absolute;
+    left: -9999%; width: 1px;
+    height: 1px;
+    line-height: 0;
+    text-indent: -9999px;
+} /*보호차원*/
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

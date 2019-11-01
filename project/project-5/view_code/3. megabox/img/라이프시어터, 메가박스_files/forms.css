@@ -1,0 +1,45 @@
+.form-style .form-table {
+  border-top: 2px solid #503396;
+  border-bottom: 2px solid #d2d2d2;
+  width: 100%;
+}
+.form-style .form-table th,
+.form-style .form-table td {
+  border-top: 1px solid #dcdcdc;
+  padding: 5px;
+}
+.form-style .form-table tr.ck_point{
+ border:2px solid red !important; 
+}
+.form-style .form-table tr.ck_point label{
+	color:red !important;
+}
+
+.form-style .form-table th {
+  padding-left: 26px;
+  background-color: #f8f8f8;
+  vertical-align: top;
+  font-size: 12px;
+  font-weight: normal;
+}
+.form-style .form-table th label {
+  font-size: 12px;
+  font-weight: normal;
+}
+.form-style .form-table td {
+  padding-left: 30px;
+}
+.form-style .form-table td label,
+.form-style .form-table td span.title {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 0;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.form-style .form-table td span {
+  display: inline-block;
+}
+.form-style .form-table td span.title {
+  min-width: 56px;
+}

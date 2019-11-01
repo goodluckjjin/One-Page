@@ -1,0 +1,417 @@
+#wrap {counter-reset: itemCount;}
+
+/* HEADER */
+header {position: relative; z-index: 10;}
+#banner {overflow: hidden; position: relative; background-color: #38619d;}
+#banner a {overflow: hidden; display: block; margin: auto; width: 980px; height: 70px; transition: height 0.6s;}
+:checked~header #banner a {height: 0;}
+#banner label {position: absolute; top: 20px; right: 20px; width: 30px; height: 30px; text-indent: -9999px; background-image: url(../img/banner_close.png); background-position: -110px -31px;}
+
+.hdWrap {}
+/* .hdWrap ~ */
+	.gnb {position: relative; z-index: 1; background-color: #f0f0f0;}
+	.gnb a {color: #333; font-size: 11px; line-height: 32px; white-space: nowrap;}
+	.gnb li {float: left; position: relative; margin-left: 12px;}
+	.gnb li .detail {display: none; position: absolute; top: 100%; padding: 20px; border: 1px solid #ddd; background-color: #fff; box-shadow: 0px 4px 5px rgba(0,0,0,0.3);}
+	.gnb li:hover .detail {display: block;}
+	.gnb li .detail a {display: block; font-size: 12px; line-height: 1;}
+	.gnb li .detail a:hover {color: #4285f4; text-decoration: underline;}
+	.gnb li .detail a+a {margin-top: 12px;}
+	.gnb .favorite {float: left;}
+	.gnb .favorite li:nth-child(2)>a {position: relative; padding-right: 12px;}
+	.gnb .favorite li:nth-child(2)>a:after {content: ""; position: absolute; right: 0px; top: 3px; border-width: 4px 4px 0; border-top-color: #333;}
+	.gnb .favorite .detail {right: -12px;}
+	.gnb .member {float: right; margin-right: 37px;}
+	.gnb .member .detail {right: -37px;}
+	.hdCnt {}
+	.hdCnt .cateWrap {float: left; position: relative;}
+	.hdCnt .cateWrap .category {padding-top: 70px; width: 110px; height: 115px; color: #fff; font-size: 13px; text-align: center; background-image: url(../img/bg_hd.png); background-position: 0 0; cursor: pointer;}
+	.hdCnt .cateWrap .cate {display: none; position: absolute; top: 100%; left: 0; border: 1px solid #ddd; box-shadow: 0px 4px 5px rgba(0,0,0,0.3); background-color: #fff;}
+	.hdCnt .cateWrap:hover .cate {display: block;}
+	.hdCnt .cateWrap .cate ul {padding: 8px 0 5px;}
+	.hdCnt .cateWrap .cate li:after {content: ""; display: block; clear: both;} /* clearfix */
+	.hdCnt .cateWrap .cate a {float: left; position: relative; color: #333; font-size: 12px; line-height: 29px;}
+	.hdCnt .cateWrap .cate :hover>a {color: #4285f4; font-weight: 700; text-decoration: underline;}
+	.hdCnt .cateWrap .cate .new:after {content: ""; position: absolute; top: 8px; left: 100%; margin-left: 4px; width: 12px; height: 12px; background-image: url(../img/ico_new.png); background-size: 12px;}
+	.hdCnt .cateWrap .cate .cateList1 {width: 165px;}
+	.hdCnt .cateWrap .cate .cateList1+.cateList1 {border-top: 1px solid #ddd;}
+	.hdCnt .cateWrap .cate .cateList1 .cateItem1 {padding-left: 51px; background-image: url(../img/cate.png); background-position-x: -8px;}
+	.hdCnt .cateWrap .cate .cateList1 .cateItem1:hover {background-position-x: -200px;}
+	.hdCnt .cateWrap .cate .cateList1 .cateItem1 .cateName1 {}
+	.hdCnt .cateWrap .cate .cateList2 {display: none; position: absolute; top: -1px; bottom: -1px; left: 100%; width: 592px; background-color: #fff; border: 1px solid #ddd; box-shadow: 2px 4px 5px rgba(0,0,0,0.3);}
+	.hdCnt .cateWrap .cate :hover>.cateList2 {display: block;}
+	.hdCnt .cateWrap .cate .cateList2 .bgLink {position: absolute; top: 0; bottom: 0; right: 0; width: 433px; background-image: url(../img/cate_bg_01.jpg); background-position: 100% 100%;}
+	.hdCnt .cateWrap .cate .cateList2 .bgLink a {width: 100%; height: 100%;}
+	.hdCnt .cateWrap .cate .cateList2 .cateItem2 {padding-left: 20px; width: 157px;}
+	.hdCnt .cateWrap .cate .cateList2 .cateItem2 .cateName2 {}
+	.hdCnt .cateWrap .cate .cateList3 {display: none; position: absolute; top: -1px; bottom: -1px; left: 100%; margin-left: -433px; border-left: 1px solid #ddd;}
+	.hdCnt .cateWrap .cate :hover>.cateList3 {display: block;}
+	.hdCnt .cateWrap .cate .cateList3 .cateItem3 {padding-left: 20px;}
+	.hdCnt .cateWrap .cate .cateList3 .cateItem3 .cateName3 {}
+	.hdCnt .cntArea {float: left; margin: 28px 0 0 30px;}
+	.hdCnt .cntArea .searchWrap {}
+	.hdCnt .cntArea .searchWrap h1 {float: left;}
+	.hdCnt .cntArea .searchWrap h1 a {display: block; width: 174px; height: 41px; text-indent: -9999px; background-image: url(../img/logo_00.png); background-size: 100%;}
+/* .hdCnt .cntArea .searchWrap ~ */
+	.barWrap {float: left; margin-left: 20px; border: 2px solid #4285f4;}
+	.barWrap input {float: left; line-height: 37px;}
+	.barWrap .barSelect {float: left; position: relative; width: 134px; height: 37px; border-right: 1px solid #ddd;}
+	.barWrap .barSelect .selected {display: block; position: relative; color: #555; font-size: 12px; line-height: 37px; text-indent: 10px;}
+	.barWrap .barSelect .selected:before {content: "선택";}
+	.barWrap .barSelect .selected:after {content: ""; position: absolute; right: 10px; top: 50%; margin-top: -2px; border-width: 5px 5px 0 5px; border-color: #999 transparent;}
+	.barWrap .barSelect .selectDetail {display: none; overflow: auto; position: absolute; top: 100%; left: 0; right: 0; height: 300px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0px 4px 5px rgba(0,0,0,0.3);}
+	.barWrap .barSelect .selectDetail ul {padding: 10px 0 10px 13px;}
+	.barWrap .barSelect .selectDetail ul li {}
+	.barWrap .barSelect .selectDetail ul li label {display: block; font-size: 12px; letter-spacing: -1px; line-height: 28px;}
+	.barWrap .barSelect .selectDetail ul li label:hover {color: #008cff; text-decoration: underline;}
+
+	.barWrap .mic {float: left; width: 23px; height: 37px;}
+	.barWrap .mic i {display: block; margin-top: 7px; height: 24px; text-indent: -9999px; background-image: url(../img/mic.png); background-position-y: 0; background-size: 20px;}
+	.barWrap .mic :checked+i {background-position-y: 100%;}
+	.barWrap [type=text] {width: 310px; text-indent: 10px;}
+	.barWrap [type=text]::placeholder {color: #333; font-size: 14px;}
+	.barWrap [type=text]:focus::placeholder {visibility: hidden;}
+	.barWrap [type=submit] {width: 50px; text-indent: -9999px; background-image: url(../img/bg_hd.png);     background-position: -112px -71px;}
+	/* checked */
+	#btnSelect:checked~.selectDetail {display: block;}
+	#btnSelect:checked~.selected:after {margin-top: -3px; border-width: 0 5px 5px 5px;}
+	#bar_all:checked~.selected:before {content: "전체";}
+	#bar_season:checked~.selected:before {content: "시즌관";}
+	#bar_woman:checked~.selected:before {content: "여성패션";}
+	#bar_man:checked~.selected:before {content: "남성패션";}
+	#bar_baby:checked~.selected:before {content: "베이비패션";}
+	#bar_girl:checked~.selected:before {content: "여아패션";}
+	#bar_boy:checked~.selected:before {content: "남아패션";}
+	#bar_sports:checked~.selected:before {content: "스포츠패션";}
+	#bar_shoes:checked~.selected:before {content: "신발";}
+	#bar_bag:checked~.selected:before {content: "가방";}
+	#bar_luxury:checked~.selected:before {content: "명품패션";}
+	#bar_beauty:checked~.selected:before {content: "뷰티";}
+.hdWrap .hdCnt .cntArea nav {margin-top: 11px;}
+.hdWrap .hdCnt .cntArea nav ul {overflow: hidden;}
+.hdWrap .hdCnt .cntArea nav ul li {float: left;}
+.hdWrap .hdCnt .cntArea nav ul li.rocket {padding-left: 10px; background-image: url(../img/bg_hd.png); background-position: 0 -116px;}
+.hdWrap .hdCnt .cntArea nav ul li a {display: block; padding: 0 14px; color: #333; font-size: 12px; line-height: 32px;}
+.hdWrap .hdCnt .userPage {float: left;}
+.hdWrap .hdCnt .userPage .pageList {float: left; margin: 20px 0 0 22px; width: 50px; text-align: center;}
+.hdWrap .hdCnt .userPage .pageList>a {display: block;}
+.hdWrap .hdCnt .userPage .pageList>a:before {content: ""; margin: auto; display: block; background-image: url(../img/bg_hd.png);}
+.hdWrap .hdCnt .userPage span {color: #333; font-size: 12px;}
+.hdWrap .hdCnt .userPage .myPage {}
+.hdWrap .hdCnt .userPage .myPage>a:before {margin: 8px auto 4px; width: 30px; height: 29px; background-position: -112px -42px;}
+.hdWrap .hdCnt .userPage .cart {position: relative;}
+.hdWrap .hdCnt .userPage .cart>a:before {width: 40px; height: 41px; background-position: -112px 0;}
+.hdWrap .hdCnt .userPage .cart .cartDetail {position: absolute; top: 100%; right: -20px; padding-top: 20px; visibility: hidden;}
+.hdWrap .hdCnt .userPage .cart:hover .cartDetail {visibility: visible;}
+/* .hdWrap .hdCnt .userPage .cart .cartDetail ~ */
+	.detailFrm {position: relative; width: 302px; border: 1px solid #ddd; box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3); background-color: #fff;}
+	.detailFrm:before {content: ""; position: absolute; top: -6px; right: 40px; width: 10px; height: 10px; border-width: 1px 1px 0 0; border-color: #ddd; background-color: #fff; transform: rotate(-45deg);}
+	.detailFrm ul {padding: 0 20px;}
+	.detailFrm ul:empty:after {content: "장바구니에 담긴 상품이 없습니다."; display: block; font-size: 12px; line-height: 110px; text-align: center;}
+	.detailFrm ul li {padding: 10px 0; counter-increment: itemCount;}
+	.detailFrm ul li+li {border-top: 1px solid #eee;}
+	.detailFrm ul li a {display: block; text-align: left; font-size: 0;}
+	.detailFrm ul li a span {display: inline-block; vertical-align: middle;}
+	.detailFrm ul li a .thumb {}
+	.detailFrm ul li a .thumb img { width: 72px;}
+	.detailFrm ul li a .prodName {margin-left: 12px; width: 176px; font-size: 12px;}
+	.detailFrm ul li a:hover .prodName {color: #4285f4; text-decoration: underline;}
+	.detailFrm .viewCart {display: block; position: relative; color: #333; font-size: 12px; text-align: center; line-height: 60px; border-top: 1px solid #ddd; background-color: #fafafa;}
+	.detailFrm .viewCart:hover {color: #4285f4; text-decoration: underline;}
+	.detailFrm .viewCart:after {content: ""; position: absolute; top: 25px; right: 87px; width: 6px; height: 9px; background-image: url(../img/bg_hd.png); background-position: -143px -51px;}
+	.detailFrm ul:empty+.viewCart {display: none;}
+.hdWrap .hdCnt .userPage .cart .itemLength {position: absolute; top: 4px; right: 15px; color: #fff; font-family: tahoma; font-size: 10px; font-weight: bold;}
+.hdWrap .hdCnt .userPage .cart .itemLength:after {content: counter(itemCount);}
+
+/* FOOTER */
+footer {border-top: 2px solid #ddd; color: #555; font-size: 12px;}
+footer nav {text-align: center;}
+footer nav a {padding: 0 35px; line-height: 50px;}
+footer nav a+a {border-left: 1px solid #888;}
+footer .ftCnt {border-top: 1px solid #ddd;}
+footer .ftCnt .cntArea {overflow: hidden; padding: 30px 0;}
+footer .ftCnt .cntArea h2 {float: left; width: 150px;}
+footer .ftCnt .cntArea h2 a {display: block; margin-left: 10px; width: 117px; height: 34px; text-indent: -9999px; background-image: url(../img/bg_ft.png); background-position: -20px -36px;}
+footer .ftCnt .cntArea .companyInfo {float: left; line-height: 1.5;}
+footer .ftCnt .cntArea .companyInfo em {display: block; font-size: 11px;}
+footer .ftCnt .cntArea .companyInfo .licence {text-decoration: underline; font-size: 11px;}
+footer .ftCnt .cntArea .companyInfo .licence:after {content: " >";}
+footer .ftCnt .cntArea .companyInfo span,
+footer .ftCnt .cntArea .companyInfo strong {display: block;}
+footer .ftCnt .cntArea .companyInfo address {float: left; width: 260px;}
+footer .ftCnt .cntArea .companyInfo .customer {float: left; width: 340px;}
+footer .ftCnt .cntArea .companyInfo .customer strong {font-size: 24px; font-family: Tahoma;}
+footer .ftCnt .cntArea .companyInfo .policyGuide {float: left; width: 270px;}
+footer .ftCnt .awards {overflow: hidden; padding: 15px 40px; border-top: 1px solid #ddd;}
+footer .ftCnt .awards li {float: left; background-image: url(../img/bg_ft.png); background-position-y: -107px;}
+footer .ftCnt .awards li+li {margin-left: 32px;}
+footer .ftCnt .awards li a {display: block; width: 188px; height: 50px; text-indent: -9999px;}
+footer .copy {position: relative; padding-top: 21px; height: 80px; background-color: #333;}
+footer .copy p {color: #888; font-size: 11px; width: 640px;}
+footer .copy .sns {position: absolute; top: 0; right: 0;}
+footer .copy .sns a {float: left; margin-left: 8px; width: 34px; height: 34px; text-indent: -9999px; background-image: url(../img/bg_ft.png); background-position-y: -30px;}
+
+/* CONTAINER */
+#container {}
+#visual {position: relative; height: 450px; text-indent: -9999px;}
+#visual .btnVisual {position: absolute; left: 50%; margin-left: 320px; width: 176px; height: 56px; border: 1px solid #fff;}
+#visual .btnVisual:hover {border: 2px solid #4285f4;}
+#visual .bgVisual {display: none; height: 450px;}
+#visual .bgVisual:hover {display: block;}
+#visual .bgVisual a {position: static;}
+#visual :nth-of-type(1):hover~:nth-of-type(1),
+#visual :nth-of-type(2):hover~:nth-of-type(2),
+#visual :nth-of-type(3):hover~:nth-of-type(3),
+#visual :nth-of-type(4):hover~:nth-of-type(4),
+#visual :nth-of-type(5):hover~:nth-of-type(5),
+#visual :nth-of-type(6):hover~:nth-of-type(6),
+#visual:not(:hover) .bgVisual:nth-of-type(1) {display: block;}
+#content {}
+#content aside {position: absolute; z-index: 1; top: 88px; left: 100%; margin-left: -10px; width: 102px;}
+#content aside .banner {display: block; width: 102px; height: 150px; text-indent: -9999px; background-image: url(../img/ad.jpg);}
+#content aside .util {margin-top: 10px;}
+#content aside .util a.asideBtn {display: block; position: relative; height: 33px; text-indent: -9999px; background-image: url(../img/bg_04.png); background-position-x: -31px;}
+#content aside .util>div:after {position: absolute; top: 10px; right: 7px; color: #3abbff; font-family: Arial; font-size: 12px; font-weight: bold; text-indent: 0;}
+#content aside .util .cart {position: relative;}
+#content aside .util .cart:after {content: counter(itemCount);}
+#content aside .util .cart a {background-position-y: 0;}
+#content aside .util .cart a:hover {background-position-y: -33px;}
+#content aside .util .recent {position: relative; counter-reset: recentList;}
+#content aside .util .recent:after {content: counter(recentList);}
+#content aside .util .recent a {background-position-y: -66px;}
+/*#content aside .util .recent ~*/
+	.recentDetail {border-width: 0 1px 1px; border-color: #ddd; counter-reset: pageCount;}
+	.recentDetail ul {padding: 2px 0 8px; width: 100%; height: 338px;}
+	.recentDetail ul li {overflow: hidden; float: right; position: relative; margin: 0 13px 0 0; height: 0; counter-increment: recentList;}
+	.recentDetail ul li:nth-child(4n+1) {counter-increment: recentList pageCount;}
+	.recentDetail ul li a {overflow: hidden; position: relative; display: block; width: 74px;}
+	.recentDetail ul li:hover a {width: 219px;}
+	.recentDetail ul li:hover a:before {content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border: 2px solid #333;}
+	.recentDetail ul li a .info {display: none; float: left; padding: 20px 10px; width: 145px; height: 74px; background-color: #f1f1f1;}
+	.recentDetail ul li:hover a .info {display: block;}
+	.recentDetail ul li a .info .prodName {display: block; color: #555; font-size: 11px;}
+	.recentDetail ul li a .info .price {display: block; margin-top: 6px; color: #0096e4; font-size: 15px;}
+	.recentDetail ul li a .info .price:after {content: " 원"; font-size: 12px;}
+	.recentDetail ul li a .thumb {float: left; width: 74px; height: 74px; background-size: 100%;}
+	.recentDetail ul li .btnClose {display: none; position: absolute; top: 0; right: 0; width: 13px; height: 13px; text-indent: -9999px; background-image: url(../img/bg_04.png); background-position: 0 -32px;}
+	.recentDetail ul li:hover .btnClose {display: block;}
+	.recentDetail .controlArea {overflow: hidden; padding: 0 15px 14px;}
+	.recentDetail .controlArea .pageView {float: left; margin-top: 2px; color: #555; font-size: 11px;}
+	.recentDetail .controlArea .pageView:before {color: #0085da; font-weight: bold;}
+	.recentDetail .controlArea .pageView:after {content: counter(pageCount);}
+	.recentDetail .controlArea .pageArrow {float: right;}
+	.recentDetail .controlArea .pageArrow label {display: none; float: left; width: 16px; height: 16px; text-indent: -9999px; background-image: url(../img/bg_04.png); background-position-y: 0;}
+	.recentDetail .controlArea .pageArrow label.prev {background-position-x: 0px;}
+	.recentDetail .controlArea .pageArrow label.next {background-position-x: -15px;}
+
+	#page1:checked~ul li.page1,
+	#page2:checked~ul li.page2,
+	#page3:checked~ul li.page3 {margin-top: 8px; height: 74px;}
+	#page1:checked~.controlArea .pageView:before {content: "1";}
+	#page2:checked~.controlArea .pageView:before {content: "2";}
+	#page3:checked~.controlArea .pageView:before {content: "3";}
+	#page1:checked~.controlArea .pageArrow .page1,
+	#page2:checked~.controlArea .pageArrow .page2,
+	#page3:checked~.controlArea .pageArrow .page3 {display: block;}
+
+#content section {padding-top: 40px;}
+#content section:not(#trend) {padding-right: 40px;}
+#content section h3 {margin-bottom: 15px; text-indent: -9999px;}
+#content section .sectionCnt {}
+#today {}
+#today h3 {width: 355px; height: 33px; background-image: url(../img/bg_01.png); background-position: 0 -65px;}
+#today .sectionCnt {overflow: hidden; padding: 7px; border: 1px solid #ddd;}
+#today .sectionCnt a {float: left; position: relative; margin: 6px; width: 229px; height: 299px; text-indent: -9999px; border: 1px solid #ddd;}
+#today .sectionCnt a:hover {border-color: #0096e4;}
+#today .sectionCnt a:before {position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.05);}
+#today .sectionCnt a:hover:before {content: ""; }
+#today .sectionCnt a:after {content: ""; position: absolute; bottom: 20px; left: 20px; width: 40px; height: 40px; background-image: url(../img/bg_01.png); background-position: -515px -236px;}
+#today .sectionCnt a:hover:after {width: 100px; background-position-x: -563px;}
+#today .sectionCnt a.wide {width: 470px;}
+
+#cart {}
+#cart h3 {width: 187px; height: 33px; background-image: url(../img/bg_01.png); background-position: -396px -570px;}
+#cart .sectionCnt {position: relative;}
+#cart .sectionCnt ul {overflow: hidden;}
+#cart .sectionCnt ul li {display: none; float: left; width: 188px; border: 1px solid #ddd;}
+#cart .sectionCnt ul li:hover {border-color: #0085da;}
+#cart .sectionCnt ul li:not(:nth-child(5n+1)) {margin-left: 10px;}
+#cart .sectionCnt ul li a {display: block; position: relative;}
+#cart .sectionCnt ul li a .thumb {display: block; position: relative; height: 186px;}
+#cart .sectionCnt ul li a .info {display: block; padding: 15px 12px; height: 100px;}
+#cart .sectionCnt ul li a .info .prodName {display: block; font-size: 12px;}
+#cart .sectionCnt ul li a .info .price {display: block; margin-top: 5px; font-size: 14px;}
+#cart .sectionCnt ul li a .info .price em {margin-right: 4px; color: #db0f31; font-family: dotum; font-size: 15px; letter-spacing: -1px;}
+#cart .sectionCnt ul li a .info .price em:after {content: "%";}
+#cart .sectionCnt .controlArea {position: absolute; right: 0; bottom: 100%; margin-bottom: 17px; width: 104px; text-align: center;}
+#cart .sectionCnt .controlArea .pageView {line-height: 28px;}
+#cart .sectionCnt .controlArea label {display: none; position: absolute; top: 0; width: 28px; height: 28px; text-indent: -9999px; background-image: url(../img/bg_01.png); background-position-y: -513px;}
+#cart .sectionCnt .controlArea label:first-of-type,
+#cart .sectionCnt .controlArea label:last-of-type {background-position-y: -552px;}
+#cart .sectionCnt .controlArea label.prev {left: 0; background-position-x: 0px;}
+#cart .sectionCnt .controlArea label.next {right: 0; background-position-x: -76px;}
+#cart #cartPage1:checked~ul li.page1,
+#cart #cartPage2:checked~ul li.page2,
+#cart #cartPage3:checked~ul li.page3 {display: block;}
+#cart #cartPage1:checked~.controlArea .pageView:before {content: "1";}
+#cart #cartPage2:checked~.controlArea .pageView:before {content: "2";}
+#cart #cartPage3:checked~.controlArea .pageView:before {content: "3";}
+#cart #cartPage1:checked~.controlArea .page1,
+#cart #cartPage2:checked~.controlArea .page2,
+#cart #cartPage3:checked~.controlArea .page3 {display: block;}
+
+#recent {}
+#recent h3 {height: 25px; background-image: url(../img/bg_02.png); background-position: 0 0;}
+#recent .sectionCnt {overflow: hidden; position: relative; height: 404px;}
+#recent .sectionCnt .cntArea {float: left; width: 245px;}
+#recent .sectionCnt .cntArea+.cntArea {margin-left: -1px; width: 246px;}
+#recent .sectionCnt .cntArea .recentBtn {overflow: hidden; display: block; position: relative; padding: 20px; border-width: 1px 1px 0; border-color: #ddd;}
+#recent .sectionCnt .cntArea .recentBtn .thumb {float: left;}
+#recent .sectionCnt .cntArea .recentBtn .info {float: right; margin-top: 3px; width: 130px; font-size: 11px;}
+#recent .sectionCnt .cntArea .recentBtn .info .prodName {display: block; }
+#recent .sectionCnt .cntArea .recentBtn .info .price {display: block; margin: 4px 0 6px;}
+#recent .sectionCnt .cntArea .recentBtn .info .link {color: #0085da;}
+#recent .sectionCnt .cntArea .recentBtn .info .link:hover {text-decoration: underline;}
+#recent .sectionCnt .cntArea .recentBtn .info .link:after {content: " >";}
+#recent .sectionCnt .cntArea :not(:checked)~.recentBtn {border-bottom: 1px solid #0085da;}
+#recent .sectionCnt .cntArea :checked~.recentBtn,
+#recent .sectionCnt .cntArea .recentBtn:hover {border-color: #0085da; z-index: 1;}
+#recent .sectionCnt .cntArea .recentView {display: none; position: absolute; top: 107px; bottom: 0; left: 0; right: 0; padding: 0 29px; border-width: 0 1px 1px; border-color: #0085da;}
+#recent .sectionCnt .cntArea :checked~.recentView {display: block;}
+#recent .sectionCnt .cntArea .recentView h4 {height: 39px; text-indent: -9999px; background-image: url(../img/bg_02.png); background-position: 0 -35px;}
+#recent .sectionCnt .cntArea .recentView ul {overflow: hidden;}
+#recent .sectionCnt .cntArea .recentView ul li {float: left; width: 168px;}
+#recent .sectionCnt .cntArea .recentView ul li:not(:nth-child(5n+1)) {margin-left: 20px;}
+#recent .sectionCnt .cntArea .recentView ul li a {display: block;}
+#recent .sectionCnt .cntArea .recentView ul li a .thumb {display: block; border: 1px solid #ddd;}
+#recent .sectionCnt .cntArea .recentView ul li:hover a .thumb {border-color: #0085da;}
+#recent .sectionCnt .cntArea .recentView ul li a .info {display: block;}
+#recent .sectionCnt .cntArea .recentView ul li a .info .prodName {display: block; padding-top: 12px; font-size: 11px;}
+#recent .sectionCnt .cntArea .recentView ul li a .info .price {display: block; padding-top: 8px; font-size: 14px;}
+
+#trend {}
+#trend h3 {width: 230px; height: 52px; background-image: url(../img/hot_trend.png); background-position: 0 0;}
+#trend .sectionCnt {margin-bottom: 60px;}
+#trend .sectionCnt .trendList {overflow: hidden; border-width: 2px 0 1px; border-color: #ddd;}
+#trend .sectionCnt .trendList+.trendList {margin-top: 20px;}
+#trend .sectionCnt .trendList .titArea {float: left; position: relative; padding: 40px 0 0 22px; width: 145px; height: 600px; border-right: 1px solid #ddd;}
+#trend .sectionCnt .trendList .titArea h4 {margin-bottom: 9px;}
+#trend .sectionCnt .trendList .titArea h4 img {width: 114px;}
+#trend .sectionCnt .trendList .titArea>a {color: #888; font-size: 11px;}
+#trend .sectionCnt .trendList .titArea>a:after {content: "바로가기 >";}
+#trend .sectionCnt .trendList .titArea .hotKeyword {position: absolute; bottom: 22px; left: 10px;}
+#trend .sectionCnt .trendList .titArea .hotKeyword .tit {margin-bottom: 10px; font-size: 16px; font-weight: 700;}
+#trend .sectionCnt .trendList .titArea .hotKeyword a {float: left; clear: both; padding: 0 10px; color: #999; font-size: 12px; line-height: 28px; border: 1px solid #ddd;}
+#trend .sectionCnt .trendList .titArea .hotKeyword a:before {content: "#"; margin-right: 1px;}
+#trend .sectionCnt .trendList .titArea .hotKeyword a+a {margin-top: 6px;}
+#trend .sectionCnt .trendList .cntArea {float: left; height: 600px;}
+#trend .sectionCnt .trendList .cntArea .trendAd {float: left; position: relative; width: 325px; height: 100%;}
+#trend .sectionCnt .trendList .cntArea .trendAd ul {position: relative; height: 100%;}
+#trend .sectionCnt .trendList .cntArea .trendAd ul li {position: absolute; top: 0; left: 0; z-index: 1; animation: trendAd 12s infinite;}
+#trend .sectionCnt .trendList .cntArea .trendAd ul li a {display: block;}
+#trend .sectionCnt .trendList .cntArea .trendAd ul li a img {}
+#trend .sectionCnt .trendList .cntArea .trendAd ul li a .adTit {position: absolute; bottom: 50px; left: 22px; right: 22px; padding: 20px 22px; color: #fff; text-align: center; background-color: #999;}
+#trend .sectionCnt .trendList .cntArea .trendAd ul li a .adTit strong {display: block; font-size: 16px; }
+#trend .sectionCnt .trendList .cntArea .trendAd ul li a .adTit span {display: block; margin-top: 8px; font-size: 12px;}
+#trend .sectionCnt .trendList .cntArea .trendAd .adPaging {position: absolute; bottom: 10px; left: 0; z-index: 4; right: 0; text-align: center;}
+#trend .sectionCnt .trendList .cntArea .trendAd .adPaging i {display: inline-block; width: 10px; height: 10px; background-color: gray; border-radius: 5px; opacity: 0.25; animation: trendAdPaging 12s infinite;}
+#trend .sectionCnt .trendList .cntArea .trendAd .adPaging i+i {margin-left: 10px;}
+#trend .sectionCnt .trendList .cntArea .trendAd :nth-child(1) {animation-delay: 0s !important;}
+#trend .sectionCnt .trendList .cntArea .trendAd :nth-child(2) {animation-delay: 2s !important;}
+#trend .sectionCnt .trendList .cntArea .trendAd :nth-child(3) {animation-delay: 4s !important;}
+#trend .sectionCnt .trendList .cntArea .trendAd :nth-child(4) {animation-delay: 6s !important;}
+#trend .sectionCnt .trendList .cntArea .trendAd :nth-child(5) {animation-delay: 8s !important;}
+#trend .sectionCnt .trendList .cntArea .trendAd :nth-child(6) {animation-delay: 10s !important;}
+#trend .sectionCnt .trendList .cntArea .trendShop {float: left; position: relative; width: 550px; height: 100%; border-left: 1px solid #ddd;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList {position: absolute; top: 0; left: 0; background-color: #fff; width: 100%; height: 100%;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul {overflow: hidden;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li {float: left; padding: 22px 8px 0 15px; width: 183px;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li:nth-child(n+4) {border-top: 1px solid #ddd;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a {display: block;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a span {display: block;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a .thumb {}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a .info {padding-top: 6px; height: 110px;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a .info .tit {color: #111; font-size: 11px; line-height: 14px;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a:hover .info .tit {color: #0085da; text-decoration: underline;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList ul li a .info .price {margin-top: 8px; font-size: 14px;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList label {display: none; position: absolute; top: 50%; margin-top: -33px; width: 30px; height: 50px; text-indent: -9999px; background-image: url(../img/bg_03.png); background-position-y: -13px;}
+#trend .sectionCnt .trendList .cntArea .trendShop:hover .shopList label {display: block;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList label.prev {left: 0; background-position-x: 0;}
+#trend .sectionCnt .trendList .cntArea .trendShop .shopList label.next {right: 0; background-position-x: -50px;}
+#trend .sectionCnt .trendList .cntArea .trendShop nav {position: absolute; z-index: 2; bottom: 10px; left: 50%; margin-left: -45px;}
+#trend .sectionCnt .trendList .cntArea .trendShop nav label {float: left; width: 10px; height: 10px; background-color: gray; border-radius: 5px; opacity: 0.25;}
+#trend .sectionCnt .trendList .cntArea .trendShop nav label+label {margin-left: 10px;}
+
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(1):checked~.shopList:nth-of-type(1),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(2):checked~.shopList:nth-of-type(2),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(3):checked~.shopList:nth-of-type(3),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(4):checked~.shopList:nth-of-type(4),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(5):checked~.shopList:nth-of-type(5) {z-index: 1;}
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(1):checked~nav label:nth-child(1),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(2):checked~nav label:nth-child(2),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(3):checked~nav label:nth-child(3),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(4):checked~nav label:nth-child(4),
+#trend .sectionCnt .trendList .cntArea .trendShop :nth-child(5):checked~nav label:nth-child(5) {opacity: 1;}
+#trend #fashionW {border-top-color: #f6699e;}
+#trend #fashionW .hotKeyword>a {color: #f6699e;}
+#trend #fashionW .hotKeyword>a:hover {color: #fff; background-color: #f6699e; border-color: #f6699e;}
+#trend #fashionW .adTit  {background-color: #f6699e;}
+#trend #fashionM {border-top-color: #1992df;}
+#trend #fashionM .hotKeyword>a {color: #1992df;}
+#trend #fashionM .hotKeyword>a:hover {color: #fff; background-color: #1992df; border-color: #1992df;}
+#trend #fashionM .adTit  {background-color: #1992df;}
+#trend #beauty {border-top-color: #7e57c2;}
+#trend #beauty .hotKeyword>a {color: #7e57c2;}
+#trend #beauty .hotKeyword>a:hover {color: #fff; background-color: #7e57c2; border-color: #7e57c2;}
+#trend #beauty .adTit  {background-color: #7e57c2;}
+#trend #baby {border-top-color: #00aad4;}
+#trend #baby .hotKeyword>a {color: #00aad4;}
+#trend #baby .hotKeyword>a:hover {color: #fff; background-color: #00aad4; border-color: #00aad4;}
+#trend #baby .adTit  {background-color: #00aad4;}
+#trend .trendBar {position: fixed; z-index: 11; border: 1px solid #ddd; top: 112px; left: 50%; margin-left: -556px; background-color: #fff; transition: top 0.6s;}
+#trend .trendBar .barBtnWrap {}
+#trend .trendBar .barBtnWrap li {width: 34px;}
+#trend .trendBar .barBtnWrap li a {overflow: hidden; display: block; position: relative; width: 34px; color: #fff; font-size: 12px; line-height: 34px; text-indent: 44px; white-space: nowrap;}
+#trend .trendBar .barBtnWrap li:not(:hover) a {background-color: #fff !important;}
+#trend .trendBar .barBtnWrap li a:before {content: ""; position: absolute; top: 0; left: 0; width: 34px; height: 34px; background-image: url(../img/hot_nav.png); background-position-x: -1px; background-position-y: inherit;}
+#trend .trendBar .barBtnWrap li:hover a:before {background-position-x: -51px;}
+#trend .trendBar .barBtnWrap li:hover a {width: 154px;}
+#trend .trendBar .barBtnSet {border-top: 1px solid #ddd;}
+#trend .trendBar .barBtnSet .btnSet {display: block; height: 54px; text-indent: -9999px; background-image: url(../img/bg_03.png); background-position: 0 -265px;} /*label*/
+#trend .trendBar .barBtnSet .setDetail {position: absolute; left: 100%; top: -1px; margin-left: 10px; width: 302px; background-color: #fff; border: 1px solid #ddd;}
+#trend .trendBar .barBtnSet .setDetail:before {content: ""; position: absolute; left: -7px; top: 646px; width: 7px; height: 14px; background: url(../img/bg_03.png) -93px -63px no-repeat;}
+#trend .trendBar .barBtnSet .setDetail .detailTop {overflow: hidden; border-bottom: 1px solid #ddd;}
+#trend .trendBar .barBtnSet .setDetail .detailTop .topDesc {float: left; padding: 17px 0 0 20px; width: 238px; height: 62px;}
+#trend .trendBar .barBtnSet .setDetail .detailTop .topDesc strong {display: block; color: #333; font-size: 12px;}
+#trend .trendBar .barBtnSet .setDetail .detailTop .topDesc span {display: block; margin-top: 4px; color: #888; font-size: 11px;}
+#trend .trendBar .barBtnSet .setDetail .detailTop [type=reset] {float: right; width: 62px; line-height: 62px; text-align: center; color: #555; font-size: 12px; background-color: #fafafa;}
+#trend .trendBar .barBtnSet .setDetail .detailList {}
+#trend .trendBar .barBtnSet .setDetail .detailList label {overflow: hidden; display: block; position: relative; margin: 0 20px; color: #333; font-size: 12px; line-height: 38px; border-bottom: 1px solid #ddd; background-image: url(../img/bg_03.png); background-position: 226px -65px;}
+#trend .trendBar .barBtnSet .setDetail .detailList label input {display: block; float: left; margin: 13px 0 0 20px; width: 13px; height: 13px;}
+#trend .trendBar .barBtnSet .setDetail .detailList label span {float: left; position: relative; padding-left: 42px; opacity: 0.5;}
+#trend .trendBar .barBtnSet .setDetail .detailList label :checked+span {opacity: 1;}
+#trend .trendBar .barBtnSet .setDetail .detailList label span:before {content: ""; position: absolute; top: 0; left: 0; width: 42px; height: 38px; background-image: url(../img/hot_nav.png); background-position-x: 10px; background-position-y: inherit;}
+#trend .trendBar .barBtnSet .setDetail .detailBtnArea {overflow: hidden; margin-top: -1px; border-top: 1px solid #eee;}
+#trend .trendBar .barBtnSet .setDetail .detailBtnArea label {float: left; position: relative; width: 50%; font-size: 12px; line-height: 50px; text-align: center; background-color: #fafafa;}
+#trend .trendBar .barBtnSet .setDetail .detailBtnArea label[for=setBtn] {color: #555;}
+#trend .trendBar .barBtnSet .setDetail .detailBtnArea label[for=barSubmit] {color: #0085da;}
+#trend .trendBar .barBtnSet .setDetail .detailBtnArea label[for=barSubmit]:before {content: ""; position: absolute; top: 15px; left: 0; width: 1px; height: 20px; background-color: #ddd;}
+:checked~#container #trend .trendBar {top: 42px;}
+
+
+/* KEYFRAMES */
+@keyframes trendAd {
+	0% {z-index: 3;}
+	16.6665% {z-index: 3;}
+	16.6666% {z-index: 1;}
+	100% {z-index: 1;}
+}
+@keyframes trendAdPaging {
+	0% {opacity: 1;}
+	16.6665% {opacity: 1;}
+	16.6666% {opacity: 0.25;}
+	100% {opacity: 0.25;}
+}
+
+
+/* MEDIAQUERY

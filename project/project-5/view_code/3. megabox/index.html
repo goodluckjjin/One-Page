@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Megabox</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<form class="visual_grp">
+			<input type="checkbox" id="all_menu_btn">
+			<!--checkbox가 겹치면 한번밖에 작동이 안되므로 위의 하나의 input에 .all_menu_close_btn과 .all_menu_btn을 함께 연결시켜 준다.
+			 <input type="checkbox" id="all_menu_close_btn"> -->
+			<input type="checkbox" id="visual_cnt1">
+			<input type="checkbox" id="visual_cnt2">
+			<input type="checkbox" id="visual_cnt3">
+			<input type="checkbox" id="visual_cnt4">
+			<input type="reset" id="visual_modal">
+			<label for="visual_modal" class="visual_modal"></label>
+			<div class="all_menu_box">
+				<div class="container">
+					<div class="col_box clearfix">
+						<div class="col col1">
+							<ul class="cate cate1">
+								<h4 class="tit"><a href="#" title="예매 바로가기">예매</a></h4>
+								<li><a href="#" title="빠른 예매바로가기">빠른 예매</a></li>
+								<li><a href="#" title="상영시간표 바로가기">상영시간표</a></li>
+								<li><a href="#" title="예매 확인/취소 바로가기">예매 확인/취소</a></li>
+								<li><a href="#" title="더 부티크 프라이빗 예매 바로가기">더 부티크 프라이빗 예매</a></li>
+							</ul>
+							<ul class="cate cate2">
+								<h4 class="tit"><a href="#" title="영화 바로가기">영화</a></h4>
+								<li><a href="#" title="박스오피스 바로가기">박스오피스</a></li>
+								<li><a href="#" title="최신개봉작 바로가기">최신개봉작</a></li>
+								<li><a href="#" title="상영예정작 바로가기">상영예정작</a></li>
+								<li><a href="#" title="영화제 바로가기">영화제</a></li>
+								<li><a href="#" title="보고 싶은 영화 바로가기">보고 싶은 영화</a></li>
+								<li><a href="#" title="나의 무비스토리 바로가기">나의 무비스토리</a></li>
+								<li><a href="#" title="무비포스트 바로가기">무비포스트</a></li>
+							</ul>
+						</div>
+						<div class="col col2">
+							<ul class="cate cate3">
+								<h4 class="tit"><a href="#" title="큐레이션 바로가기">큐레이션</a></h4>
+								<li><a href="#" title="필름 소사이어티 바로가기">필름 소사이어티</a></li>
+								<li><a href="#" title="클래식 소사이어티 바로가기">클래식 소사이어티</a></li>
+								<li><a href="#" title="프로젝트 바로가기">프로젝트</a></li>
+							</ul>
+							<ul class="cate cate4">
+								<h4 class="tit"><a href="#" title="영화관 바로가기">영화관</a></h4>
+								<li><a href="#" title="영화관찾기 바로가기">영화관찾기</a></li>
+								<li><a href="#" title="특별관 안내 바로가기">특별관 안내</a></li>
+							</ul>
+							<ul class="cate cate5">
+								<h4 class="tit"><a href="#" title="스토어 바로가기">스토어</a></h4>
+								<li><a href="#" title="메가티켓 바로가기">메가티켓</a></li>
+								<li><a href="#" title="메가찬스 바로가기">메가찬스</a></li>
+								<li><a href="#" title="스페셜굿즈/콤보 바로가기">스페셜굿즈/콤보</a></li>
+							</ul>
+							<ul class="cate cate6">
+								<h4 class="tit"><a href="#" title="할인카드 바로가기">할인카드</a></h4>
+								<li><a href="#" title="할인 신용카드 바로가기">할인 신용카드</a></li>
+								<li><a href="#" title="할인 포인트카드 바로가기">할인 포인트카드</a></li>
+								<li><a href="#" title="관람권/상품권 바로가기">관람권/상품권</a></li>
+							</ul>
+						</div>
+						<div class="col col3">
+							<ul class="cate cate7">
+								<h4 class="tit"><a href="#" title="이벤트 바로가기">이벤트</a></h4>
+								<li><a href="#" title="메가박스 이벤트 바로가기">메가박스 이벤트</a></li>
+								<li><a href="#" title="영화 이벤트 바로가기">영화 이벤트</a></li>
+								<li><a href="#" title="제휴 이벤트 바로가기">제휴 이벤트</a></li>
+								<li><a href="#" title="영화관 이벤트 바로가기">영화관 이벤트</a></li>
+							</ul>
+							<ul class="cate cate8">
+								<h4 class="tit"><a href="#" title="멤버십 바로가기">멤버십</a></h4>
+								<li><a href="#" title="멤버십 안내 바로가기">멤버십 안내</a></li>
+								<li><a href="#" title="멤버십 카드 등록 바로가기">멤버십 카드 등록</a></li>
+								<li><a href="#" title="VIP ZONE 바로가기">VIP ZONE</a></li>
+								<li><a href="#" title="스페셜 멤버십 바로가기">스페셜 멤버십</a></li>
+							</ul>
+							<ul class="cate cate9">
+								<h4 class="tit"><a href="#" title="나의 메가박스 바로가기">나의 메가박스</a></h4>
+								<li><a href="#" title="멤버십 정보 바로가기">멤버십 정보</a></li>
+								<li><a href="#" title="예매 확인/취소 바로가기">예매 확인/취소</a></li>
+								<li><a href="#" title="스토어 구매내역 바로가기">스토어 구매내역</a></li>
+								<li><a href="#" title="나의 무비스토리 바로가기">나의 무비스토리</a></li>
+								<li><a href="#" title="관람권/VIP쿠폰 바로가기">관람권/VIP쿠폰</a></li>
+								<li><a href="#" title="회원정보수정 바로가기">회원정보수정</a></li>
+								<li><a href="#" title="나의 문의 내역 바로가기">나의 문의 내역</a></li>
+							</ul>
+						</div>
+						<div class="col col4">
+							<ul class="cate cate10">
+								<h4 class="tit"><a href="#" title="고객센터 바로가기">고객센터</a></h4>
+								<li><a href="#" title="자주 묻는 질문 바로가기">자주 묻는 질문</a></li>
+								<li><a href="#" title="공지사항 바로가기">공지사항</a></li>
+								<li><a href="#" title="1:1 문의 바로가기">1:1 문의</a></li>
+								<li><a href="#" title="단체관람/대관문의 바로가기">단체관람/대관문의</a></li>
+								<li><a href="#" title="분실물 문의/접수 바로가기">분실물 문의/접수</a></li>
+								<li><a href="#" title="메가박스 온라인 소개 바로가기">메가박스 온라인 소개</a></li>
+								<li><a href="#" title="스크린 수 배정에 관한 기준 바로가기">스크린 수 배정에 관한 기준</a></li>
+							</ul>
+							<ul class="cate cate11">
+								<h4 class="tit"><a href="#" title="회원서비스 바로가기">회원서비스</a></h4>
+								<li><a href="#" title="회원가입 바로가기">회원가입</a></li>
+								<li><a href="#" title="아이디/비밀번호 찾기 바로가기">아이디/비밀번호 찾기</a></li>
+								<li><a href="#" title="휴면계정 복구신청 바로가기">휴면계정 복구신청</a></li>
+								<li><a href="#" title="이용약관 바로가기">이용약관</a></li>
+								<li><a href="#" title="개인정보 처리방침 바로가기">개인정보 처리방침</a></li>
+								<li><a href="#" title="회원 탈퇴 바로가기">회원 탈퇴</a></li>
+							</ul>
+						</div>
+						<div class="col col5">
+							<ul class="cate cate12">
+								<h4 class="tit"><a href="#" title="회사 소개 바로가기">회사 소개</a></h4>
+								<li><a href="#" title="메가박스 소개 바로가기">메가박스 소개</a></li>
+								<li><a href="#" title="사회공헌 바로가기">사회공헌</a></li>
+								<li><a href="#" title="홍보자료 바로가기">홍보자료</a></li>
+								<li><a href="#" title="제휴/광고/부대사업문의 바로가기">제휴/광고/부대사업문의</a></li>
+								<li><a href="#" title="온라인제보센터 바로가기">온라인제보센터</a></li>
+								<li><a href="#" title="오시는 길 바로가기">오시는 길</a></li>
+								<li><a href="#" title="IR자료 바로가기">IR자료</a></li>
+							</ul>
+							<ul class="cate cate13">
+								<h4 class="tit"><a href="#" title="인재 채용 바로가기">인재 채용</a></h4>
+								<li><a href="#" title="메가박스 HR 바로가기">메가박스 HR</a></li>
+								<li><a href="#" title="채용안내 바로가기">채용안내</a></li>
+								<li><a href="#" title="채용공고 바로가기">채용공고</a></li>
+								<li><a href="#" title="Benefit 바로가기">Benefit</a></li>
+							</ul>
+							<a class="customer_survey" href="#" title="고객 만족도 조사 바로가기">
+								<h4 class="survey_tit">고객 만족도 조사</h4>
+								<span>설문참여하기</span>
+							</a>
+						</div>
+						<a class="all_menu_banner" href="#" title="영화 바로가기">
+							<img src="./img/top_banner.jpg">
+						</a>
+						<label for="all_menu_btn" class="all_menu_close_btn">
+							<span class="line line1"></span>
+							<span class="line line2"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<ul class="visual_detail_list">
+				<li class="visual_detail visual_detail1"></li>
+				<li class="visual_detail visual_detail2"></li>
+				<li class="visual_detail visual_detail3"></li>
+				<li class="visual_detail visual_detail4"></li>
+			</ul>
+		</form>
+		<header class="header">
+			<div class="topHeader">
+				<div class="container">
+					<div class="banner_img">
+						<button type="button" class="close_btn">X</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottomHeader">
+				<div class="container clearfix"> <!-- float를 끊어줄 땐 바로 위 부모에게 -->
+					<h1 class="logo">
+						<a href="#" title="main page 바로가기">
+							<img src="./img/logo_slogan.png" alt="logo_slogan"/>
+						</a>
+					</h1>
+					<nav class="gnb_box">
+						<h2 class="hidden">메가박스 주요메뉴</h2>
+						<ul class="gnb clearfix">
+							<li><a href="#" title="영화 페이지 바로가기">영화</a></li>
+							<li><a href="#" title="큐레이션 페이지 바로가기">큐레이션</a></li>
+							<li><a href="#" title="영화관 페이지 바로가기">영화관</a></li>
+							<li><a href="#" title="특별관 페이지 바로가기">특별관</a></li>
+							<li><a href="#" title="스토어 페이지 바로가기">스토어</a></li>
+							<li><a href="#" title="이벤트 페이지 바로가기">이벤트</a></li>
+							<li><a href="#" title="로그인 페이지 바로가기">로그인</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="visual">
+				<div class="visual_box visual_box1">
+					<div class="container clearfix">
+						<div class="m2 m21">
+							<label for="all_menu_btn" class="all_menu">
+								<span class="menu_bar">
+									<span class="bar bar1"></span>
+									<span class="bar bar2"></span>
+									<span class="bar bar3"></span>
+								</span>
+								<span>전체메뉴</span>
+							</label>
+							<ul class="visual_menu l_menu">
+								<li><a href="#" title="필름 소사이어티 바로가기">필름 소사이어티</a></li>
+								<li><a href="#" title="클래식 소사이어티 바로가기">클래식 소사이어티</a></li>
+							</ul>
+						</div>
+						<div class="m2 m22">
+							<ul class="visual_menu r_menu">
+								<li><a href="#" title="고객센터 바로가기">고객센터</a></li>
+								<li><a href="#" title="멤버십 바로가기">멤버십</a></li>
+								<li><a href="#" title="VIP 바로가기">VIP</a></li>
+							</ul>
+							<div class="visual_btn_box">
+								<a class="visual_btn schedule_btn" href="#" title="상영시간표 바로가기">상영시간표</a>
+								<button class="visual_btn fast_book_btn" type="button">빠른예매</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="visual_box visual_box2">
+					<input type="radio" name="visual_grp" id="slide1" checked>
+					<input type="radio" name="visual_grp" id="slide2">
+					<input type="radio" name="visual_grp" id="slide3">
+					<input type="radio" name="visual_grp" id="slide4">
+					<ul class="visual_list">
+						<li class="visual4 visual41">
+							<label for="visual_cnt1" class="visual_cnt visual_cnt1"></label>
+							<label class="arrow_btn prev_btn" for="slide4"></label>
+							<label class="arrow_btn next_btn" for="slide2"></label>
+						</li>
+						<li class="visual4 visual42">
+							<label for="visual_cnt2" class="visual_cnt visual_cnt2"></label>
+							<label class="arrow_btn prev_btn" for="slide1"></label>
+							<label class="arrow_btn next_btn" for="slide3"></label>
+						</li>
+						<li class="visual4 visual43">
+							<label for="visual_cnt3" class="visual_cnt visual_cnt3"></label>
+							<label class="arrow_btn prev_btn" for="slide2"></label>
+							<label class="arrow_btn next_btn" for="slide4"></label>
+						</li>
+						<li class="visual4 visual44">
+							<label for="visual_cnt4" class="visual_cnt visual_cnt4"></label>
+							<label class="arrow_btn prev_btn" for="slide3"></label>
+							<label class="arrow_btn next_btn" for="slide1"></label>
+						</li>
+					</ul>
+					<label class="play_btn"></label>
+					<ul class="slide_btn_circle">
+						<li><label class="slide_btn slide_btn1" for="slide1">slide_btn1</label></li>
+						<li><label class="slide_btn slide_btn2" for="slide2">slide_btn2</label></li>
+						<li><label class="slide_btn slide_btn3" for="slide3">slide_btn3</label></li>
+						<li><label class="slide_btn slide_btn4" for="slide4">slide_btn4</label></li>
+					</ul>
+					<div class="container">
+					</div>
+				</div>
+			</section>
+			<section class="m_content mc1">
+				<div class="container">
+					<ul class="tap_menu clearfix">
+						<li><a href="#" title="박스오피스 탭 바로가기">박스오피스</a></li>
+						<li><a href="#" title="최신개봉작 탭 바로가기">최신개봉작</a></li>
+						<li><a href="#" title="상영예정작 탭 바로가기">상영예정작</a></li>
+						<li><a href="#" title="큐레이션 탭 바로가기">큐레이션</a></li>
+					</ul>
+					<div class="tap_content">
+						<div class="movie_poster poster1">
+							<div class="poster_section">
+								<span class="rank">1</span>
+								<div class="theater_type">
+									<span class="theater_icon1"></span>
+									<span class="theater_icon2"></span>
+								</div>
+							</div>
+							<div class="info_section">
+								<span class="age">12</span>
+								<h4 class="movie_title">스윙키즈</h4>
+								<div class="poster_btn_box">
+									<button class="poster_btn detail_btn" type="button">상세정보</button>
+									<button class="poster_btn book_btn" type="button">예매하기</button>
+								</div>
+							</div>
+						</div>
+						<div class="movie_poster poster2">
+							<div class="poster_section">
+								<span class="rank">1</span>
+								<div class="theater_type">
+									<span class="theater_icon1"></span>
+									<span class="theater_icon2"></span>
+								</div>
+							</div>
+							<div class="info_section">
+								<span class="age">12</span>
+								<h4 class="movie_title">보헤미안 랩소디</h4>
+								<div class="poster_btn_box">
+									<button class="poster_btn detail_btn" type="button">상세정보</button>
+									<button class="poster_btn book_btn" type="button">예매하기</button>
+								</div>
+							</div>
+						</div>
+						<div class="movie_poster poster3">
+							<div class="poster_section">
+								<span class="rank">1</span>
+								<div class="theater_type">
+									<span class="theater_icon1"></span>
+									<span class="theater_icon2"></span>
+								</div>
+							</div>
+							<div class="info_section">
+								<span class="age">12</span>
+								<h4 class="movie_title">국가부도의 날</h4>
+								<div class="poster_btn_box">
+									<button class="poster_btn detail_btn" type="button">상세정보</button>
+									<button class="poster_btn book_btn" type="button">예매하기</button>
+								</div>
+							</div>
+						</div>
+						<div class="movie_poster poster4">
+							<div class="poster_section">
+								<span class="rank">1</span>
+								<div class="theater_type">
+									<span class="theater_icon1"></span>
+									<span class="theater_icon2"></span>
+								</div>
+							</div>
+							<div class="info_section">
+								<span class="age">12</span>
+								<h4 class="movie_title">도어락</h4>
+								<div class="poster_btn_box">
+									<button class="poster_btn detail_btn" type="button">상세정보</button>
+									<button class="poster_btn book_btn" type="button">예매하기</button>
+								</div>
+							</div>
+						</div>
+					</div><!-- tap_content -->
+					<a class="more_tap_content" href="#"></a>
+				</div>
+			</section>
+			<section class="m_content mc2">
+				<div class="container">
+					<h3 class="m_title">새로운 이벤트</h3>
+					<div class="mc_content clearfix">
+						<article class="a2 a21 clearfix">
+							<div class="event_box event_box1"></div>
+							<div class="event_box event_box2"></div>
+							<div class="event_box event_box3"></div>
+						</article>
+						<article class="a2 a22">
+							<div class="event_box right_event"></div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="m_content mc3">
+				<div class="container">
+					<h3 class="m_title"></h3>
+					<div class="mc_content">
+						<div class="open_link new_open"><a href="#" title="신규오픈 바로가기">
+							<span class="open_tag">신규오픈</span>
+							<p class="open_city">충청북도</p>
+							<p class="open_local">청주충북대</p>
+							<p class="open_date">11월 30일</p>
+						</a></div>
+						<div class="open_link renewal_open"><a href="#" title="리뉴얼오픈 바로가기">
+							<span class="open_tag">신규오픈</span>
+							<p class="open_city">충청북도</p>
+							<p class="open_local">청주충북대</p>
+							<p class="open_date">11월 30일</p>
+						</a></div>
+					</div>
+				</div>
+			</section>
+			<section class="m_content mc4">
+				<div class="container">
+					<h3 class="m_title">제휴 이벤트</h3>
+					<div class="mc_content clearfix">
+						<article class="a2 a21 clearfix">
+							<h4></h4>
+							<div class="event_box event_box1"></div>
+							<div class="event_box event_box2"></div>
+							<div class="event_box event_box3"></div>
+							<div class="event_box event_box4"></div>
+						</article>
+						<article class="a2 a22">
+							<h4></h4>
+							<div class="event_box right_event"></div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="m_content mc5">
+				<div class="container clearfix">
+					<div class="a3 a31">
+						<h3 class="m_title">공지사항</h3>
+						<ul class="notice_tap clearfix">
+							<li><a href="#" title="notice_link">전체공지</a></li>
+							<li><a href="#" title="notice_link">영화관 공지</a></li>
+						</ul>
+						<table class="notice_table">
+							<caption class="hidden">전체공지</caption>
+							<tbody>
+								<tr>
+									<td>
+										<div class="table_box">
+											<strong>전체</strong>
+											<span>|2018.12.07</span>
+											<p class="table_title">
+												<a href="#" title="table_title">[공지] 수협은행 전산시스템 점검에 따른 서버블라블라</a>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table_box">
+											<strong>전체</strong>
+											<span>|2018.12.07</span>
+											<p class="table_title">
+												<a href="#" title="table_title">[공지] 수협은행 전산시스템 점검에 따른 서버블라블라</a>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table_box">
+											<strong>전체</strong>
+											<span>|2018.12.07</span>
+											<p class="table_title">
+												<a href="#" title="table_title">[공지] 수협은행 전산시스템 점검에 따른 서버블라블라</a>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="table_box">
+											<strong>전체</strong>
+											<span>|2018.12.07</span>
+											<p class="table_title">
+												<a href="#" title="table_title">[공지] 수협은행 전산시스템 점검에 따른 서버블라블라</a>
+											</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="#" class="more_btn"></a>
+					</div>
+					<div class="a3 a32">
+						<h3 class="m_title">메가박스 할인카드</h3>
+						<ul class="m_list">
+							<li>
+								<div class="list_cnt list_img">
+									<img src="./img/img_main_01.png" alt="card img"/>
+								</div>
+								<div class="list_cnt list_text">
+									<p class="card_title"><strong>T멤버십 일반</strong></p>
+									<p class="card_text">영화 2,000원 할인<br/>(1일 5매)</p>
+								</div>
+							</li>
+							<li>
+								<div class="list_cnt list_img">
+									<img src="./img/img_card_02.png" width="100" height="63" alt="card img"/>
+								</div>
+								<div class="list_cnt list_text">
+									<p class="card_title"><strong>T멤버십 일반</strong></p>
+									<p class="card_text">영화 2,000원 할인<br/>(1일 5매)</p>
+								</div>
+							</li>
+							<li>
+								<div class="list_cnt list_img">
+									<img src="./img/img_card_03.png" width="100" height="63" alt="card img"/>
+								</div>
+								<div class="list_cnt list_text">
+									<p class="card_title"><strong>T멤버십 일반</strong></p>
+									<p class="card_text">영화 2,000원 할인<br/>(1일 5매)</p>
+								</div>
+							</li>
+						</ul>
+						<a href="#" class="more_btn"></a>
+					</div>
+					<div class="a3 a33">
+						<h3 class="m_title">고객센터</h3>
+						<div class="m_content clearfix">
+							<div class="customer_btn customer_btn1"><a href="#" title="1:1문의 바로가기">1:1문의</a></div>
+							<div class="customer_btn customer_btn2"><a href="#" title="단체관람/대관문의 바로가기">단체관람/대관문의</a></div>
+							<div class="customer_btn customer_btn3"><a href="#" title="자주묻는질문 바로가기">자주묻는질문</a></div>
+							<div class="customer_btn customer_btn4"><a href="#" title="분실물 문의/접수 바로가기">분실물 문의/접수</a></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="m_content mc6">
+				<div class="container">
+					<aside class="ad_img"></aside> <!-- aside는 무조건 광고에 사용되는 태그 -->
+				</div>
+			</section>
+			<div class="fixedNav">
+				<ul class="fixed_list">
+					<li>
+						<a href="#" title="2018 VIP안내">
+							<i class="crown_icon"></i>2018<br>VIP안내</a>
+					</li>
+					<li>
+						<a href="#" title="더 부티크 프라이빗 대관예매">더 부티크<br>프라이빗<br>대관예매</a>
+					</li>
+					<li>
+						<a href="#" title="무비 포스트">무비<br>포스트</a>
+					</li>
+					<li>
+						<a href="#" title="할인카드 안내">할인카드<br>안내</a>
+					</li>
+				</ul>
+				<a class="topBtn" href="#"></a>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="topFooter">
+				<div class="container">
+					<p class="footer_theater">메가박스 영화관 찾기</p>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">서울</p>
+						<p class="footer_theater_city">
+							<a href="#" title="강남지점 바로가기">강남</a>
+							<a href="#" title="강남대로(씨티)지점 바로가기">강남대로(씨티)</a>
+							<a href="#" title="강동지점 바로가기">강동</a>
+							<a href="#" title="군자지점 바로가기">군자</a>
+							<a href="#" title="동대문지점 바로가기">동대문</a>
+							<a href="#" title="마곡지점 바로가기">마곡</a>
+							<a href="#" title="목동지점 바로가기">목동</a>
+							<a href="#" title="상봉지점 바로가기">상봉</a>
+							<a href="#" title="상암월드컵경기장지점 바로가기">상암월드컵경기장</a>
+							<a href="#" title="센트럴지점 바로가기">센트럴</a>
+							<a href="#" title="송파파크하비오지점 바로가기">송파파크하비오</a>
+							<a href="#" title="신촌지점 바로가기">신촌</a>
+							<a href="#" title="은평지점 바로가기">은평</a>
+							<a href="#" title="이수지점 바로가기">이수</a>
+							<a href="#" title="창동지점 바로가기">창동</a>
+							<a href="#" title="코엑스지점 바로가기">코엑스</a>
+							<a href="#" title="화곡지점 바로가기">화곡</a>
+							<a href="#" title="ARTININE지점 바로가기">ARTININE</a>
+							<a href="#" title="EOE4지점 바로가기">EOE4</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">경기</p>
+						<p class="footer_theater_city">
+							<a href="#" title="고양스타필드지점 바로가기">고양스타필드</a>
+							<a href="#" title="김포지점 바로가기">김포</a>
+							<a href="#" title="김포한강신도시지점 바로가기">김포한강신도시</a>
+							<a href="#" title="남양주지점 바로가기">남양주</a>
+							<a href="#" title="동탄지점 바로가기">동탄</a>
+							<a href="#" title="미사강변지점 바로가기">미사강변</a>
+							<a href="#" title="백석지점 바로가기">백석</a>
+							<a href="#" title="별내지점 바로가기">별내</a>
+							<a href="#" title="분당지점 바로가기">분당</a>
+							<a href="#" title="수원지점 바로가기">수원</a>
+							<a href="#" title="수원남문지점 바로가기">수원남문</a>
+							<a href="#" title="시흥배곧지점 바로가기">시흥배곧</a>
+							<a href="#" title="안산중앙지점 바로가기">안산중앙</a>
+							<a href="#" title="양주지점 바로가기">양주</a>
+							<a href="#" title="영통지점 바로가기">영통</a>
+							<a href="#" title="오산지점 바로가기">오산</a>
+							<a href="#" title="의정부 민락지점 바로가기">의정부 민락</a>
+							<a href="#" title="일산지점 바로가기">일산</a>
+							<a href="#" title="일산밸리시타지점 바로가기">일산밸리시타</a>
+							<a href="#" title="킨텍스지점 바로가기">킨텍스</a>
+							<a href="#" title="파주금촌지점 바로가기">파주금촌</a>
+							<a href="#" title="파주운경지점 바로가기">파주운경</a>
+							<a href="#" title="파주출판도시지점 바로가기">파주출판도시</a>
+							<a href="#" title="평택지점 바로가기">평택</a>
+							<a href="#" title="하남스타필드지점 바로가기">하남스타필드</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">인천</p>
+						<p class="footer_theater_city">
+							<a href="#" title="검단지점 바로가기">검단</a>
+							<a href="#" title="송도지점 바로가기">송도</a>
+							<a href="#" title="영종지점 바로가기">영종</a>
+							<a href="#" title="인천논현지점 바로가기">인천논현</a>
+							<a href="#" title="청라지점 바로가기">청라</a>
+							<a href="#" title="청라지젤지점 바로가기">청라지젤</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">대전 | 세종 | 충청</p>
+						<p class="footer_theater_city">
+							<a href="#" title="공주지점 바로가기">공주</a>
+							<a href="#" title="대전지점 바로가기">대전</a>
+							<a href="#" title="세종지점 바로가기">세종</a>
+							<a href="#" title="오창지점 바로가기">오창</a>
+							<a href="#" title="제천지점 바로가기">제천</a>
+							<a href="#" title="진천지점 바로가기">진천</a>
+							<a href="#" title="천안지점 바로가기">천안</a>
+							<a href="#" title="청주충북대지점 바로가기">청주충북대</a>
+							<a href="#" title="충주지점 바로가기">충주</a>
+							<a href="#" title="홍성내포지점 바로가기">홍성내포</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">부산 | 경상</p>
+						<p class="footer_theater_city">
+							<a href="#" title="거창지점 바로가기">거창</a>
+							<a href="#" title="경산하양지점 바로가기">경산하양</a>
+							<a href="#" title="경주지점 바로가기">경주</a>
+							<a href="#" title="구미강동지점 바로가기">구미강동</a>
+							<a href="#" title="김천지점 바로가기">김천</a>
+							<a href="#" title="남포항지점 바로가기">남포항</a>
+							<a href="#" title="대구(칠성로)지점 바로가기">대구(칠성로)</a>
+							<a href="#" title="대구 신세계지점 바로가기">대구 신세계</a>
+							<a href="#" title="대구 이시아지점 바로가기">대구 이시아</a>
+							<a href="#" title="덕천지점 바로가기">덕천</a>
+							<a href="#" title="마산지점 바로가기">마산</a>
+							<a href="#" title="문경지점 바로가기">문경</a>
+							<a href="#" title="부산극장지점 바로가기">부산극장</a>
+							<a href="#" title="부산대지점 바로가기">부산대</a>
+							<a href="#" title="북대구(칠곡)지점 바로가기">북대구(칠곡)</a>
+							<a href="#" title="사천지점 바로가기">사천</a>
+							<a href="#" title="삼천포지점 바로가기">삼천포</a>
+							<a href="#" title="안동지점 바로가기">안동</a>
+							<a href="#" title="양산지점 바로가기">양산</a>
+							<a href="#" title="울산지점 바로가기">울산</a>
+							<a href="#" title="정관지점 바로가기">정관</a>
+							<a href="#" title="창원지점 바로가기">창원</a>
+							<a href="#" title="해운대(정산)지점 바로가기">해운대(정산)</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">광주 | 전라</p>
+						<p class="footer_theater_city">
+							<a href="#" title="지점 바로가기">광주(충장로)</a>
+							<a href="#" title="지점 바로가기">광주상무</a>
+							<a href="#" title="지점 바로가기">광무하남</a>
+							<a href="#" title="지점 바로가기">남원</a>
+							<a href="#" title="지점 바로가기">목포</a>
+							<a href="#" title="지점 바로가기">목포하당(포르모)</a>
+							<a href="#" title="지점 바로가기">송천</a>
+							<a href="#" title="지점 바로가기">순천</a>
+							<a href="#" title="지점 바로가기">여수</a>
+							<a href="#" title="지점 바로가기">여수웅천</a>
+							<a href="#" title="지점 바로가기">전대(광주)</a>
+							<a href="#" title="지점 바로가기">전주(객사)</a>
+							<a href="#" title="지점 바로가기">첨단(광주)</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">강원</p>
+						<p class="footer_theater_city">
+							<a href="#" title="남춘천지점 바로가기">남춘천</a>
+							<a href="#" title="속초지점 바로가기">속초</a>
+							<a href="#" title="원주지점 바로가기">원주</a>
+							<a href="#" title="원주센트럴지점 바로가기">원주센트럴</a>
+						</p>
+					</div>
+					<div class="footer_theater_box">
+						<p class="footer_theater_local">제주</p>
+						<p class="footer_theater_city">
+							<a href="#" title="제주지점 바로가기">제주</a>
+							<a href="#" title="제주아라지점 바로가기">제주아라</a>
+						</p>
+					</div>
+				</div>
+			</div><!--topFooter-->
+			<div class="bottomFooter">
+				<div class="container clearfix">
+					<div class="a2 a21">
+						<div class="footer_img">
+							<img src="./img/logo_footer_new.png" alt="로고 푸터">
+						</div>
+						<ul class="footer_menu">
+							<li><a href="#" title="회사소개">회사소개</a></li>
+							<li><a href="#" title="채용정보">채용정보</a></li>
+							<li><a href="#" title="제휴/광고/부대사업 문의">제휴/광고/부대사업 문의</a></li>
+							<li><a href="#" title="이용약관">이용약관</a></li>
+							<li><a class="point_color" href="#" title="개인정보 처리방침">개인정보 처리방침</a></li>
+							<li><a href="#" title="고객센터">고객센터</a></li>
+							<li><a href="#" title="윤리경영">윤리경영</a></li>
+						</ul>
+						<div class="footer_info">
+							<address>서울특별시 강남구 도산대로 156, 2층 메가박스중앙(주) (논현동, 중앙엠앤비사옥)</address>
+							<p class="footer_info_txt">대표자명 김진선 | 개인정보보호 책임자 경영지원실 실장 박영진</p>
+							<p class="footer_info_txt">사업자등록번호 211-86-59478 | 통신판매업신고번호 제 833호</p>
+						</div>
+					</div>
+					<div class="a2 a22">
+						<p class="footer_call">ARS<span class="white_color">1544-0070</span></p>
+						<ul class="footer_sns clearfix">
+							<li><a class="tweeter" href="#" title="tweeter"></a></li>
+							<li><a class="facebook" href="#" title="facebook"></a></li>
+							<li><a class="instagram" href="#" title="instagram"></a></li>
+							<li><a class="google" href="#" title="google"></a></li>
+							<li><a class="apple" href="#" title="apple"></a></li>
+						</ul>
+						<p class="copyright">Copyright 2014 by MegaboxJoongAng, Inc. All rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
